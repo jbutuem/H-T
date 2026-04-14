@@ -158,6 +158,99 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
 .qr-copy:hover{background:var(--sl);color:#fff;border-color:var(--sl)}
 .qr-section-title{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#bbb;margin:14px 0 6px}
 
+
+
+/* ── OVERVIEW ── */
+.ov-wrap{padding-bottom:100px}
+.ov-hero{background:var(--sl);border-radius:var(--radius);padding:22px 20px;margin-bottom:16px;color:#fff}
+.ov-hero-eyebrow{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
+.ov-hero-title{font-size:22px;font-weight:300;line-height:1.2;margin-bottom:6px}
+.ov-hero-title strong{font-weight:700;color:var(--jd)}
+.ov-hero-sub{font-size:12px;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:16px}
+.ov-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ov-kpi{background:rgba(255,255,255,.08);border-radius:10px;padding:10px 12px;text-align:center}
+.ov-kpi-num{font-size:20px;font-weight:300;color:var(--jd);line-height:1}
+.ov-kpi-lbl{font-size:9px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4}
+
+.ov-section-title{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin:20px 0 10px 2px}
+
+/* PHASE LANES */
+.ov-lane{background:#fff;border-radius:var(--radius);border:1px solid #e0e0d8;margin-bottom:12px;overflow:hidden}
+.ov-lane-header{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;transition:background .15s}
+.ov-lane-header:hover{background:#f7f7f2}
+.ov-lane-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.ov-lane-info{flex:1}
+.ov-lane-title{font-size:14px;font-weight:600;color:var(--sl);margin-bottom:2px}
+.ov-lane-meta{font-size:10px;color:var(--muted)}
+.ov-lane-progress{display:flex;align-items:center;gap:8px;margin-left:auto}
+.ov-lane-pct{font-size:11px;font-weight:600;color:var(--sg);min-width:28px;text-align:right}
+.ov-lane-bar{width:60px;height:4px;background:#eee;border-radius:2px;overflow:hidden}
+.ov-lane-fill{height:100%;background:var(--sg);border-radius:2px;transition:width .4s}
+.ov-lane-chevron{font-size:14px;color:#ccc;transition:transform .2s;margin-left:6px}
+.ov-lane.ov-open .ov-lane-chevron{transform:rotate(90deg)}
+
+.ov-tasks{display:none;border-top:1px solid #f0f0ea}
+.ov-lane.ov-open .ov-tasks{display:block}
+.ov-task-row{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:0.5px solid #f5f5ef;cursor:pointer;transition:background .12s}
+.ov-task-row:last-child{border-bottom:none}
+.ov-task-row:hover{background:#f0f6f8}
+.ov-task-dot{width:8px;height:8px;border-radius:50%;border:2px solid #ccc;flex-shrink:0;transition:all .2s}
+.ov-task-dot.done{background:var(--sg);border-color:var(--sg)}
+.ov-task-dot.req{border-color:var(--req);background:var(--req-bg)}
+.ov-task-name{font-size:12px;color:#444;flex:1;line-height:1.4}
+.ov-task-name.done{text-decoration:line-through;color:#bbb}
+.ov-task-badge{font-size:9px;padding:2px 7px;border-radius:8px;font-weight:500;white-space:nowrap;flex-shrink:0}
+.ov-task-arrow{font-size:12px;color:#ccc;flex-shrink:0}
+
+/* TGT MINI */
+.ov-tgt-row{display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:0.5px dashed #e8f0f2;cursor:pointer;transition:background .12s;background:#f8fbfc}
+.ov-tgt-row:hover{background:#eef5f8}
+.ov-tgt-row:last-child{border-bottom:none}
+.ov-tgt-dot{width:8px;height:8px;border-radius:2px;border:1.5px solid var(--sl3);flex-shrink:0;transition:all .2s}
+.ov-tgt-dot.done{background:var(--sl);border-color:var(--sl)}
+.ov-tgt-label{font-size:11px;color:var(--sl2);flex:1}
+.ov-tgt-label.done{text-decoration:line-through;color:#bbb}
+.ov-tgt-tag{font-size:8px;background:var(--sl3);color:var(--sl);padding:2px 6px;border-radius:4px;font-weight:600;letter-spacing:.3px}
+.ov-tgt-section{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sl2);padding:8px 16px 4px;background:#f0f6f8}
+
+/* CALENDAR STRIP */
+.ov-cal{background:#fff;border-radius:var(--radius);border:1px solid #e0e0d8;overflow:hidden;margin-bottom:12px}
+.ov-cal-header{padding:12px 16px 8px;border-bottom:1px solid #f0f0ea}
+.ov-cal-title{font-size:12px;font-weight:600;color:var(--sl)}
+.ov-months{display:flex;gap:0;overflow-x:auto;padding:12px 16px 14px}
+.ov-months::-webkit-scrollbar{display:none}
+.ov-month{flex-shrink:0;min-width:160px}
+.ov-month-name{font-size:10px;font-weight:700;color:var(--sl);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;padding-bottom:6px;border-bottom:2px solid var(--sl3)}
+.ov-event{display:flex;align-items:flex-start;gap:6px;margin-bottom:7px;cursor:pointer;padding:4px 6px;border-radius:6px;transition:background .12s}
+.ov-event:hover{background:#f0f6f8}
+.ov-event-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.ov-event-text{font-size:11px;color:#444;line-height:1.4}
+.ov-event-date{font-size:9px;color:#999;margin-top:1px}
+.ov-month-divider{width:1px;background:#f0f0ea;margin:0 12px;flex-shrink:0}
+
+@media(max-width:500px){
+  .ov-kpis{grid-template-columns:repeat(3,1fr)}
+  .ov-kpi-num{font-size:16px}
+  .ov-lane-bar{width:40px}
+}
+
+/* ── TGT ASSET CHECKLIST ── */
+.tgt-card{background:#fff;border-radius:var(--radius);border:1.5px dashed var(--sl3);margin-bottom:8px;overflow:hidden}
+.tgt-card-header{display:flex;align-items:center;gap:10px;padding:13px 16px;cursor:pointer;background:linear-gradient(135deg,#f0f6f8,#fff)}
+.tgt-card-icon{width:32px;height:32px;border-radius:8px;background:var(--sl);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.tgt-card-title{font-size:13px;font-weight:600;color:var(--sl);flex:1}
+.tgt-card-sub{font-size:10px;color:var(--muted);margin-top:2px}
+.tgt-card-body{display:none;padding:4px 16px 14px}
+.tgt-card.open .tgt-card-body{display:block}
+.tgt-card.open .task-expand-icon{transform:rotate(180deg)}
+.tgt-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid #f0f0ea}
+.tgt-item:last-child{border-bottom:none}
+.tgt-box{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--sl3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;cursor:pointer;transition:all .15s;margin-top:1px}
+.tgt-box.done{background:var(--sl);border-color:var(--sl)}
+.tgt-label{font-size:12px;color:#444;line-height:1.5;flex:1}
+.tgt-label .tgt-type{font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--sl2);margin-bottom:2px}
+.tgt-item.is-done .tgt-label{text-decoration:line-through;color:#bbb}
+
 /* ── CONGRATS ── */
 .congrats{text-align:center;padding:40px 20px;display:none}
 .congrats.show{display:block}
@@ -225,7 +318,12 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
   <!-- TIMELINE STRIP -->
   <div class="timeline-strip">
     <div class="tl-scroll" id="tl-scroll">
-      <div class="tl-week active" onclick="setPhase(0)" id="tw0">
+      <div class="tl-week active" onclick="setPhase(-1)" id="tw-1" style="background:rgba(68,207,147,.2);border-color:var(--jd);min-width:90px">
+        <div class="tl-week-label">Início</div>
+        <div class="tl-week-title">Overview</div>
+        <div class="tl-week-date">Mapa geral</div>
+      </div>
+      <div class="tl-week" onclick="setPhase(0)" id="tw0">
         <div class="tl-week-label">Fase 1</div>
         <div class="tl-week-title">Pré-lançamento</div>
         <div class="tl-week-date">Wk 13 Abr</div>
@@ -251,6 +349,282 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
 
 <!-- MAIN -->
 <div class="main" id="main-content">
+
+  <!-- ══════════ OVERVIEW ══════════ -->
+  <div id="phase--1">
+    <div class="ov-wrap">
+
+      <!-- HERO -->
+      <div class="ov-hero">
+        <div class="ov-hero-eyebrow">Campanha Global · Abr–Jun 2026</div>
+        <div class="ov-hero-title"><strong>Sensoril®</strong> Menopause<br>Global Push PT2</div>
+        <div class="ov-hero-sub">Seu mapa completo da campanha. Clique em qualquer etapa para ir direto à tarefa.</div>
+        <div class="ov-kpis">
+          <div class="ov-kpi"><div class="ov-kpi-num">4</div><div class="ov-kpi-lbl">Fases de execução</div></div>
+          <div class="ov-kpi"><div class="ov-kpi-num">15</div><div class="ov-kpi-lbl">Tarefas no total</div></div>
+          <div class="ov-kpi"><div class="ov-kpi-num" id="ov-pct-num">0%</div><div class="ov-kpi-lbl">Progresso geral</div></div>
+        </div>
+      </div>
+
+      <!-- CALENDAR -->
+      <div class="ov-section-title">📅 Calendário da campanha</div>
+      <div class="ov-cal">
+        <div class="ov-cal-header"><div class="ov-cal-title">Eventos e deadlines — Abril a Junho 2026</div></div>
+        <div class="ov-months">
+          <div class="ov-month">
+            <div class="ov-month-name">Abril</div>
+            <div class="ov-event" onclick="goToTask(0,0)">
+              <div class="ov-event-dot" style="background:var(--req)"></div>
+              <div><div class="ov-event-text">Validar Customer Journey</div><div class="ov-event-date">Wk 13 · Obrigatório</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(0,1)">
+              <div class="ov-event-dot" style="background:var(--sl)"></div>
+              <div><div class="ov-event-text">Copy deck LP → Workfront</div><div class="ov-event-date">Deadline: Abr 15</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(1,0)">
+              <div class="ov-event-dot" style="background:var(--sg)"></div>
+              <div><div class="ov-event-text">🚀 Launch — LinkedIn + LP</div><div class="ov-event-date">Abr 15–20</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(1,3)">
+              <div class="ov-event-dot" style="background:var(--sl)"></div>
+              <div><div class="ov-event-text">UTM links finais — Mollie</div><div class="ov-event-date">Abr 17</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(1,3)">
+              <div class="ov-event-dot" style="background:var(--jd)"></div>
+              <div><div class="ov-event-text">Go-live Landing Page</div><div class="ov-event-date">Abr 20</div></div>
+            </div>
+          </div>
+          <div class="ov-month-divider"></div>
+          <div class="ov-month">
+            <div class="ov-month-name">Maio</div>
+            <div class="ov-event" onclick="goToTask(2,2)">
+              <div class="ov-event-dot" style="background:var(--sl)"></div>
+              <div><div class="ov-event-text">Lista de disparo definida</div><div class="ov-event-date">Mai 01</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(2,3)">
+              <div class="ov-event-dot" style="background:var(--su)"></div>
+              <div><div class="ov-event-text">LinkedIn Paid EU/NA/LATAM</div><div class="ov-event-date">4 Mai – 5 Jun</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(2,0)">
+              <div class="ov-event-dot" style="background:var(--sg)"></div>
+              <div><div class="ov-event-text">📧 Disparo Email Marketo</div><div class="ov-event-date">5 Mai · Global</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(2,0)">
+              <div class="ov-event-dot" style="background:var(--sl)"></div>
+              <div><div class="ov-event-text">Vitafoods Europe</div><div class="ov-event-date">7 Mai · Evento</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(3,0)">
+              <div class="ov-event-dot" style="background:var(--sg)"></div>
+              <div><div class="ov-event-text">Health Edge Newsletter</div><div class="ov-event-date">18 Mai</div></div>
+            </div>
+          </div>
+          <div class="ov-month-divider"></div>
+          <div class="ov-month">
+            <div class="ov-month-name">Junho</div>
+            <div class="ov-event" onclick="goToTask(3,2)">
+              <div class="ov-event-dot" style="background:#aaa"></div>
+              <div><div class="ov-event-text">LinkedIn Orgânico APMEA</div><div class="ov-event-date">Wc 1 Jun · Sonia</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(3,2)">
+              <div class="ov-event-dot" style="background:#aaa"></div>
+              <div><div class="ov-event-text">LinkedIn Paid APMEA</div><div class="ov-event-date">Wc 8 Jun · Sonia</div></div>
+            </div>
+            <div class="ov-event" onclick="goToTask(3,2)">
+              <div class="ov-event-dot" style="background:#aaa"></div>
+              <div><div class="ov-event-text">NutraIngredients APAC</div><div class="ov-event-date">Due 22 Jun · Sonia</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE LANES -->
+      <div class="ov-section-title">🗺️ Fases e tarefas</div>
+
+      <!-- LANE 1 -->
+      <div class="ov-lane" id="ovl-0">
+        <div class="ov-lane-header" onclick="toggleLane('ovl-0')">
+          <div class="ov-lane-num" style="background:var(--sl)">1</div>
+          <div class="ov-lane-info">
+            <div class="ov-lane-title">Pré-lançamento — Validação &amp; Preparação</div>
+            <div class="ov-lane-meta">Wk 13 Abril · 4 tarefas + 4 assets TGT</div>
+          </div>
+          <div class="ov-lane-progress">
+            <div class="ov-lane-bar"><div class="ov-lane-fill" id="ovfill-0" style="width:0%"></div></div>
+            <div class="ov-lane-pct" id="ovpct-0">0%</div>
+          </div>
+          <div class="ov-lane-chevron">›</div>
+        </div>
+        <div class="ov-tasks">
+          <div class="ov-task-row" id="ovt-0" onclick="goToTask(0,0)">
+            <div class="ov-task-dot req"></div>
+            <div class="ov-task-name">Validar Customer Journey com o Digital Lead</div>
+            <span class="ov-task-badge" style="background:var(--req-bg);color:var(--req)">⚠️ Pré-req.</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-1" onclick="goToTask(0,1)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Preencher copy deck da Landing Page no Workfront</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Copy pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-2" onclick="goToTask(0,2)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Nomear e anexar as imagens no Workfront</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-3" onclick="goToTask(0,3)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Confirmar Storytelling Card body com Mollie</div>
+            <span class="ov-task-badge" style="background:var(--val-bg);color:var(--val)">🟡 Validar</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-tgt-section">📦 Assets TGT a receber</div>
+          <div class="ov-tgt-row" id="ovtgt-0-0" onclick="goToTgt(0)"><div class="ov-tgt-dot" id="ovtgtd-0-0"></div><div class="ov-tgt-label" id="ovtgtl-0-0">Key visual hero_sensoril.jpg</div><span class="ov-tgt-tag">Imagem</span></div>
+          <div class="ov-tgt-row" id="ovtgt-0-1" onclick="goToTgt(0)"><div class="ov-tgt-dot" id="ovtgtd-0-1"></div><div class="ov-tgt-label" id="ovtgtl-0-1">storytelling_sensoril.jpg</div><span class="ov-tgt-tag">Imagem</span></div>
+          <div class="ov-tgt-row" id="ovtgt-0-2" onclick="goToTgt(0)"><div class="ov-tgt-dot" id="ovtgtd-0-2"></div><div class="ov-tgt-label" id="ovtgtl-0-2">Storytelling Card body — aguardar Mollie</div><span class="ov-tgt-tag">Copy</span></div>
+          <div class="ov-tgt-row" id="ovtgt-0-3" onclick="goToTgt(0)"><div class="ov-tgt-dot" id="ovtgtd-0-3"></div><div class="ov-tgt-label" id="ovtgtl-0-3">Copy deck completo Workfront</div><span class="ov-tgt-tag">Briefing</span></div>
+        </div>
+      </div>
+
+      <!-- LANE 2 -->
+      <div class="ov-lane" id="ovl-1">
+        <div class="ov-lane-header" onclick="toggleLane('ovl-1')">
+          <div class="ov-lane-num" style="background:var(--sg)">2</div>
+          <div class="ov-lane-info">
+            <div class="ov-lane-title">Launch — LinkedIn Orgânico + Landing Page</div>
+            <div class="ov-lane-meta">15–20 Abril · 4 tarefas + 5 assets TGT</div>
+          </div>
+          <div class="ov-lane-progress">
+            <div class="ov-lane-bar"><div class="ov-lane-fill" id="ovfill-1" style="width:0%"></div></div>
+            <div class="ov-lane-pct" id="ovpct-1">0%</div>
+          </div>
+          <div class="ov-lane-chevron">›</div>
+        </div>
+        <div class="ov-tasks">
+          <div class="ov-task-row" id="ovt-4" onclick="goToTask(1,0)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Aguardar UTM final da Mollie e inserir nos 3 posts</div>
+            <span class="ov-task-badge" style="background:var(--val-bg);color:var(--val)">🟡 Aguardar</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-5" onclick="goToTask(1,1)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Publicar Post 1 — Contexto Women's Health Gap</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Copy pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-6" onclick="goToTask(1,2)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Publicar Post 2 — MenQol + Bone Health</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Copy pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-7" onclick="goToTask(1,3)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Inserir UTM final na LP e confirmar go-live Abr 20</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Copy pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-tgt-section">📦 Assets TGT a receber</div>
+          <div class="ov-tgt-row" onclick="goToTgt(1)"><div class="ov-tgt-dot" id="ovtgtd-1-0"></div><div class="ov-tgt-label" id="ovtgtl-1-0">Arte Post 1 LinkedIn 1200×627px</div><span class="ov-tgt-tag">Arte</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(1)"><div class="ov-tgt-dot" id="ovtgtd-1-1"></div><div class="ov-tgt-label" id="ovtgtl-1-1">Arte Post 2 LinkedIn</div><span class="ov-tgt-tag">Arte</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(1)"><div class="ov-tgt-dot" id="ovtgtd-1-2"></div><div class="ov-tgt-label" id="ovtgtl-1-2">Arte Post 3 LinkedIn — Bone Health</div><span class="ov-tgt-tag">Arte</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(1)"><div class="ov-tgt-dot" id="ovtgtd-1-3"></div><div class="ov-tgt-label" id="ovtgtl-1-3">Hero image LP (hero_sensoril.jpg)</div><span class="ov-tgt-tag">Imagem</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(1)"><div class="ov-tgt-dot" id="ovtgtd-1-4"></div><div class="ov-tgt-label" id="ovtgtl-1-4">Storytelling image LP</div><span class="ov-tgt-tag">Imagem</span></div>
+        </div>
+      </div>
+
+      <!-- LANE 3 -->
+      <div class="ov-lane" id="ovl-2">
+        <div class="ov-lane-header" onclick="toggleLane('ovl-2')">
+          <div class="ov-lane-num" style="background:var(--sl2)">3</div>
+          <div class="ov-lane-info">
+            <div class="ov-lane-title">Email Marketo Global + LinkedIn Paid</div>
+            <div class="ov-lane-meta">Mai 01–18 · 4 tarefas + 4 assets TGT</div>
+          </div>
+          <div class="ov-lane-progress">
+            <div class="ov-lane-bar"><div class="ov-lane-fill" id="ovfill-2" style="width:0%"></div></div>
+            <div class="ov-lane-pct" id="ovpct-2">0%</div>
+          </div>
+          <div class="ov-lane-chevron">›</div>
+        </div>
+        <div class="ov-tasks">
+          <div class="ov-task-row" id="ovt-8" onclick="goToTask(2,0)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Configurar email — subject, preheader e hero</div>
+            <span class="ov-task-badge" style="background:#fff3f0;color:var(--se)">⚠️ Atenção</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-9" onclick="goToTask(2,1)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Inserir body copy com %FIRSTNAME%</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Copy pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-10" onclick="goToTask(2,2)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Definir lista de disparo com Thaís / Digital Lead</div>
+            <span class="ov-task-badge" style="background:var(--val-bg);color:var(--val)">🟡 Alinhar</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-11" onclick="goToTask(2,3)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Acompanhar LinkedIn Paid — Andrea (EU) e Mindy (NA)</div>
+            <span class="ov-task-badge" style="background:var(--pend-bg);color:var(--pend)">🔴 Regional</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-tgt-section">📦 Assets TGT a receber</div>
+          <div class="ov-tgt-row" onclick="goToTgt(2)"><div class="ov-tgt-dot" id="ovtgtd-2-0"></div><div class="ov-tgt-label" id="ovtgtl-2-0">Banner hero email 600px</div><span class="ov-tgt-tag">Arte</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(2)"><div class="ov-tgt-dot" id="ovtgtd-2-1"></div><div class="ov-tgt-label" id="ovtgtl-2-1">Infográfico gated content</div><span class="ov-tgt-tag">Arte</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(2)"><div class="ov-tgt-dot" id="ovtgtd-2-2"></div><div class="ov-tgt-label" id="ovtgtl-2-2">Body copy email com UTM inserido</div><span class="ov-tgt-tag">Copy</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(2)"><div class="ov-tgt-dot" id="ovtgtd-2-3"></div><div class="ov-tgt-label" id="ovtgtl-2-3">Assets LinkedIn Paid EU/NA</div><span class="ov-tgt-tag">Arte</span></div>
+        </div>
+      </div>
+
+      <!-- LANE 4 -->
+      <div class="ov-lane" id="ovl-3">
+        <div class="ov-lane-header" onclick="toggleLane('ovl-3')">
+          <div class="ov-lane-num" style="background:var(--jd);color:var(--fo)">4</div>
+          <div class="ov-lane-info">
+            <div class="ov-lane-title">Health Edge Newsletter + Acompanhamento</div>
+            <div class="ov-lane-meta">Mai 18+ · 3 tarefas + 4 assets TGT</div>
+          </div>
+          <div class="ov-lane-progress">
+            <div class="ov-lane-bar"><div class="ov-lane-fill" id="ovfill-3" style="width:0%"></div></div>
+            <div class="ov-lane-pct" id="ovpct-3">0%</div>
+          </div>
+          <div class="ov-lane-chevron">›</div>
+        </div>
+        <div class="ov-tasks">
+          <div class="ov-task-row" id="ovt-12" onclick="goToTask(3,0)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Produzir artigo editorial com Andrea — Health Edge</div>
+            <span class="ov-task-badge" style="background:var(--val-bg);color:var(--val)">🟡 Validar</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-13" onclick="goToTask(3,1)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Post 3 LinkedIn — Foco Bone Health</div>
+            <span class="ov-task-badge" style="background:var(--ok-bg);color:var(--ok)">✅ Copy pronto</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-task-row" id="ovt-14" onclick="goToTask(3,2)">
+            <div class="ov-task-dot"></div>
+            <div class="ov-task-name">Acompanhar itens pendentes — Mollie, Sonia (APMEA)</div>
+            <span class="ov-task-badge" style="background:var(--pend-bg);color:var(--pend)">🔴 Acomp.</span>
+            <div class="ov-task-arrow">›</div>
+          </div>
+          <div class="ov-tgt-section">📦 Assets TGT a receber</div>
+          <div class="ov-tgt-row" onclick="goToTgt(3)"><div class="ov-tgt-dot" id="ovtgtd-3-0"></div><div class="ov-tgt-label" id="ovtgtl-3-0">Artigo Health Edge revisado</div><span class="ov-tgt-tag">Copy</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(3)"><div class="ov-tgt-dot" id="ovtgtd-3-1"></div><div class="ov-tgt-label" id="ovtgtl-3-1">Kerry Digest article draft</div><span class="ov-tgt-tag">Copy</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(3)"><div class="ov-tgt-dot" id="ovtgtd-3-2"></div><div class="ov-tgt-label" id="ovtgtl-3-2">NutraIngredients APMEA copy</div><span class="ov-tgt-tag">Copy</span></div>
+          <div class="ov-tgt-row" onclick="goToTgt(3)"><div class="ov-tgt-dot" id="ovtgtd-3-3"></div><div class="ov-tgt-label" id="ovtgtl-3-3">Suporte TGT disponível</div><span class="ov-tgt-tag">Suporte</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ══════════ FASE 0 ══════════ -->
   <div id="phase-0">
@@ -398,6 +772,38 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
       </div>
 
     </div>
+
+    <div class="tasks-section">
+      <div class="tasks-section-title">📦 Assets a receber do TGT</div>
+      <div class="tgt-card" id="tgt-0">
+        <div class="tgt-card-header" onclick="toggleTgt('tgt-0')">
+          <div class="tgt-card-icon">TGT</div>
+          <div>
+            <div class="tgt-card-title">Assets visuais — Fase 1</div>
+            <div class="tgt-card-sub">Confirme o recebimento antes de avançar</div>
+          </div>
+          <div class="task-expand-icon" style="color:#bbb;font-size:16px;margin-left:4px">▾</div>
+        </div>
+        <div class="tgt-card-body">
+          <div class="tgt-item" id="tgt-0-0" onclick="toggleTgtItem('tgt-0-0')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Imagem · JPG</div>Key visual "Science That Supports Her" — hero_sensoril.jpg</div>
+          </div>
+          <div class="tgt-item" id="tgt-0-1" onclick="toggleTgtItem('tgt-0-1')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Imagem · JPG</div>Imagem storytelling card — storytelling_sensoril.jpg</div>
+          </div>
+          <div class="tgt-item" id="tgt-0-2" onclick="toggleTgtItem('tgt-0-2')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Copy · Texto</div>Storytelling Card body aprovado pela Mollie (aguardar TGT confirmar envio à Mollie)</div>
+          </div>
+          <div class="tgt-item" id="tgt-0-3" onclick="toggleTgtItem('tgt-0-3')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Briefing · Doc</div>Copy deck completo preenchido para o Workfront (Fase 1)</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ══════════ FASE 1 ══════════ -->
@@ -515,6 +921,42 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
         </div>
       </div>
 
+    </div>
+
+    <div class="tasks-section">
+      <div class="tasks-section-title">📦 Assets a receber do TGT</div>
+      <div class="tgt-card" id="tgt-1">
+        <div class="tgt-card-header" onclick="toggleTgt('tgt-1')">
+          <div class="tgt-card-icon">TGT</div>
+          <div>
+            <div class="tgt-card-title">Assets visuais — Fase 2 · Launch</div>
+            <div class="tgt-card-sub">Confirme o recebimento antes de publicar</div>
+          </div>
+          <div class="task-expand-icon" style="color:#bbb;font-size:16px;margin-left:4px">▾</div>
+        </div>
+        <div class="tgt-card-body">
+          <div class="tgt-item" id="tgt-1-0" onclick="toggleTgtItem('tgt-1-0')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Arte · LinkedIn</div>Key visual finalizado para Post 1 — formato LinkedIn 1200×627px</div>
+          </div>
+          <div class="tgt-item" id="tgt-1-1" onclick="toggleTgtItem('tgt-1-1')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Arte · LinkedIn</div>Arte do Post 2 — nova publicação clínica MenQol + Bone Health</div>
+          </div>
+          <div class="tgt-item" id="tgt-1-2" onclick="toggleTgtItem('tgt-1-2')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Arte · LinkedIn</div>Arte do Post 3 — foco Bone Health</div>
+          </div>
+          <div class="tgt-item" id="tgt-1-3" onclick="toggleTgtItem('tgt-1-3')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Imagem · LP</div>Hero image final para Landing Page Marketo (hero_sensoril.jpg)</div>
+          </div>
+          <div class="tgt-item" id="tgt-1-4" onclick="toggleTgtItem('tgt-1-4')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Imagem · LP</div>Storytelling image para Landing Page (storytelling_sensoril.jpg)</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -640,6 +1082,38 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
       </div>
 
     </div>
+
+    <div class="tasks-section">
+      <div class="tasks-section-title">📦 Assets a receber do TGT</div>
+      <div class="tgt-card" id="tgt-2">
+        <div class="tgt-card-header" onclick="toggleTgt('tgt-2')">
+          <div class="tgt-card-icon">TGT</div>
+          <div>
+            <div class="tgt-card-title">Assets visuais — Fase 3 · Email + Paid</div>
+            <div class="tgt-card-sub">Confirme antes de configurar no Marketo</div>
+          </div>
+          <div class="task-expand-icon" style="color:#bbb;font-size:16px;margin-left:4px">▾</div>
+        </div>
+        <div class="tgt-card-body">
+          <div class="tgt-item" id="tgt-2-0" onclick="toggleTgtItem('tgt-2-0')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Arte · Email</div>Banner hero email Marketo — "SCIENCE THAT SUPPORTS HER" · 600px wide</div>
+          </div>
+          <div class="tgt-item" id="tgt-2-1" onclick="toggleTgtItem('tgt-2-1')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Arte · Email</div>Infográfico gated content (anexo ou link na biblioteca Women's Health)</div>
+          </div>
+          <div class="tgt-item" id="tgt-2-2" onclick="toggleTgtItem('tgt-2-2')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Copy · Email</div>Body copy completo do email com %FIRSTNAME% e UTM do CTA inserido</div>
+          </div>
+          <div class="tgt-item" id="tgt-2-3" onclick="toggleTgtItem('tgt-2-3')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Arte · LinkedIn Paid</div>Assets paid adaptados para EU/NA — confirmar recebimento com Andrea e Mindy</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ══════════ FASE 3 ══════════ -->
@@ -736,6 +1210,39 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
         </div>
       </div>
 
+    </div>
+
+
+    <div class="tasks-section">
+      <div class="tasks-section-title">📦 Assets a receber do TGT</div>
+      <div class="tgt-card" id="tgt-3">
+        <div class="tgt-card-header" onclick="toggleTgt('tgt-3')">
+          <div class="tgt-card-icon">TGT</div>
+          <div>
+            <div class="tgt-card-title">Assets e suporte — Fase 4 · Newsletter</div>
+            <div class="tgt-card-sub">Materiais finais de suporte editorial</div>
+          </div>
+          <div class="task-expand-icon" style="color:#bbb;font-size:16px;margin-left:4px">▾</div>
+        </div>
+        <div class="tgt-card-body">
+          <div class="tgt-item" id="tgt-3-0" onclick="toggleTgtItem('tgt-3-0')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Copy · Newsletter</div>Artigo Health Edge revisado e pronto para envio à Andrea</div>
+          </div>
+          <div class="tgt-item" id="tgt-3-1" onclick="toggleTgtItem('tgt-3-1')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Copy · Interno</div>Kerry Digest article draft — enviar à Mollie/CPG para aprovação</div>
+          </div>
+          <div class="tgt-item" id="tgt-3-2" onclick="toggleTgtItem('tgt-3-2')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Assets · APMEA</div>NutraIngredients APMEA copy adaptado — enviar à Sonia (due: 22/jun)</div>
+          </div>
+          <div class="tgt-item" id="tgt-3-3" onclick="toggleTgtItem('tgt-3-3')">
+            <div class="tgt-box"></div>
+            <div class="tgt-label"><div class="tgt-type">Suporte</div>TGT disponível para revisão final e dúvidas de execução</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- CONGRATS -->
@@ -849,14 +1356,18 @@ const phaseCounts = [4, 4, 4, 3];
 const phaseLabels = ['Fase 1 de 4 — Pré-lançamento','Fase 2 de 4 — Launch Orgânico','Fase 3 de 4 — Email + Paid','Fase 4 de 4 — Newsletter + Acomp.'];
 
 function setPhase(p) {
-  document.querySelectorAll('[id^="phase-"]').forEach(el=>el.style.display='none');
-  document.getElementById('phase-'+p).style.display='block';
-  document.querySelectorAll('.tl-week').forEach((el,i)=>{
-    el.classList.toggle('active', i===p);
+  document.querySelectorAll('[id^="phase-"]').forEach(function(el){ el.style.display='none'; });
+  var phaseEl = document.getElementById('phase-'+p);
+  if (phaseEl) phaseEl.style.display = 'block';
+  var allWeeks = document.querySelectorAll('.tl-week');
+  allWeeks.forEach(function(el, i) {
+    // tw-1 = overview (index 0), tw0 = phase0 (index 1), etc
+    el.classList.toggle('active', i === p + 1);
   });
   currentPhase = p;
   localStorage.setItem('k_phase', p);
-  updateProgress();
+  if (p >= 0) updateProgress();
+  else updateOverview();
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
@@ -899,6 +1410,7 @@ function updateCounter(counterId) {
 }
 
 function updateProgress() {
+  updateOverview();
   const saved = JSON.parse(localStorage.getItem('k_tasks')||'{}');
   const allTasks = document.querySelectorAll('.task-check');
   const total = allTasks.length;
@@ -987,6 +1499,126 @@ function cpQRKey(btn, key) {
   });
 }
 
+
+
+// ── OVERVIEW ──
+var taskIds = ['tc-0','tc-1','tc-2','tc-3','tc-4','tc-5','tc-6','tc-7','tc-8','tc-9','tc-10','tc-11','tc-12','tc-13','tc-14'];
+var taskPhase = [0,0,0,0,1,1,1,1,2,2,2,2,3,3,3];
+var phaseTaskMap = [[0,1,2,3],[4,5,6,7],[8,9,10,11],[12,13,14]];
+
+function goToTask(phase, taskIdx) {
+  setPhase(phase);
+  var globalIdx = phaseTaskMap[phase][taskIdx];
+  var tcId = 'tc-' + globalIdx;
+  setTimeout(function() {
+    var el = document.getElementById(tcId);
+    if (el) {
+      el.classList.add('expanded');
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+      el.style.boxShadow = '0 0 0 3px var(--jd)';
+      setTimeout(function(){ el.style.boxShadow = ''; }, 1800);
+    }
+  }, 120);
+}
+
+function goToTgt(phase) {
+  setPhase(phase);
+  setTimeout(function() {
+    var tgtId = 'tgt-' + phase;
+    var el = document.getElementById(tgtId);
+    if (el) {
+      el.classList.add('open');
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+      el.style.boxShadow = '0 0 0 3px var(--sl3)';
+      setTimeout(function(){ el.style.boxShadow = ''; }, 1800);
+    }
+  }, 120);
+}
+
+function toggleLane(id) {
+  document.getElementById(id).classList.toggle('ov-open');
+}
+
+function updateOverview() {
+  var saved = JSON.parse(localStorage.getItem('k_tasks')||'{}');
+  var tgtSaved = JSON.parse(localStorage.getItem('k_tgt')||'{}');
+  var totalDone = 0;
+  var total = 15;
+
+  // Update per-phase lanes and task dots
+  phaseTaskMap.forEach(function(taskList, phaseIdx) {
+    var phaseDone = 0;
+    taskList.forEach(function(globalIdx, localIdx) {
+      var tcId = 'tc-' + globalIdx;
+      var ovtId = 'ovt-' + globalIdx;
+      var isDone = saved[tcId] === true;
+      if (isDone) { phaseDone++; totalDone++; }
+      var ovtEl = document.getElementById(ovtId);
+      if (ovtEl) {
+        var dot = ovtEl.querySelector('.ov-task-dot');
+        var name = ovtEl.querySelector('.ov-task-name');
+        if (dot) dot.classList.toggle('done', isDone);
+        if (name) name.classList.toggle('done', isDone);
+      }
+    });
+    var phasePct = Math.round(phaseDone / taskList.length * 100);
+    var fillEl = document.getElementById('ovfill-' + phaseIdx);
+    var pctEl = document.getElementById('ovpct-' + phaseIdx);
+    if (fillEl) fillEl.style.width = phasePct + '%';
+    if (pctEl) pctEl.textContent = phasePct + '%';
+  });
+
+  // Update TGT dots in overview
+  var tgtMap = {
+    '0-0':'tgt-0-0','0-1':'tgt-0-1','0-2':'tgt-0-2','0-3':'tgt-0-3',
+    '1-0':'tgt-1-0','1-1':'tgt-1-1','1-2':'tgt-1-2','1-3':'tgt-1-3','1-4':'tgt-1-4',
+    '2-0':'tgt-2-0','2-1':'tgt-2-1','2-2':'tgt-2-2','2-3':'tgt-2-3',
+    '3-0':'tgt-3-0','3-1':'tgt-3-1','3-2':'tgt-3-2','3-3':'tgt-3-3'
+  };
+  Object.entries(tgtMap).forEach(function(entry) {
+    var key = entry[0]; var tgtId = entry[1];
+    var isDone = tgtSaved[tgtId] === true;
+    var dotEl = document.getElementById('ovtgtd-' + key);
+    var lblEl = document.getElementById('ovtgtl-' + key);
+    if (dotEl) dotEl.classList.toggle('done', isDone);
+    if (lblEl) lblEl.classList.toggle('done', isDone);
+  });
+
+  // Overall pct
+  var pct = Math.round(totalDone / total * 100);
+  var ovPct = document.getElementById('ov-pct-num');
+  if (ovPct) ovPct.textContent = pct + '%';
+}
+
+// ── TGT CHECKLISTS ──
+function toggleTgt(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+function toggleTgtItem(id) {
+  var item = document.getElementById(id);
+  var box = item.querySelector('.tgt-box');
+  var isDone = box.classList.toggle('done');
+  box.textContent = isDone ? '✓' : '';
+  item.classList.toggle('is-done', isDone);
+  var saved = JSON.parse(localStorage.getItem('k_tgt')||'{}');
+  saved[id] = isDone;
+  localStorage.setItem('k_tgt', JSON.stringify(saved));
+}
+function restoreTgtState() {
+  // also called by updateOverview
+
+  var saved = JSON.parse(localStorage.getItem('k_tgt')||'{}');
+  Object.entries(saved).forEach(function(entry) {
+    var id = entry[0]; var isDone = entry[1];
+    if (!isDone) return;
+    var item = document.getElementById(id);
+    if (!item) return;
+    var box = item.querySelector('.tgt-box');
+    if (box) { box.classList.add('done'); box.textContent='✓'; }
+    item.classList.add('is-done');
+  });
+}
+
 // ── QUICK REF ──
 function toggleQR() {
   document.getElementById('qr-panel').classList.toggle('open');
@@ -997,7 +1629,9 @@ document.getElementById('qr-panel').addEventListener('click', e=>{
 
 // ── INIT ──
 restoreState();
-setPhase(currentPhase);
+restoreTgtState();
+setPhase(-1);
+updateOverview();
 </script>
 </body>
 </html>
