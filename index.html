@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sensoril® Menopause PT2 — Guia de Campanha · Kerry × TGT Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --k-slate:#005776;--k-slate-80:#337d95;--k-slate-60:#66a3b3;--k-slate-40:#99c9d1;--k-slate-20:#cce4e8;
+  --k-sage:#289ba2;--k-jade:#44cf93;--k-forest:#143700;--k-stone:#f1f1e5;
+  --k-sunrise:#f9c20a;--k-sunset:#f24a00;--k-amaranth:#ffc2b3;--k-innov:#dfff11;
+  --k-white:#fff;--k-text:#1a1a1a;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans',sans-serif;background:#f4f4ee;color:var(--k-text);min-height:100vh}
+
+/* ── LAYOUT ── */
+.layout{display:flex;min-height:100vh}
+.sidebar{width:220px;background:var(--k-slate);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;display:flex;flex-direction:column}
+.main{margin-left:220px;flex:1;min-width:0}
+
+/* ── SIDEBAR ── */
+.sidebar-logo{padding:20px 18px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.sidebar-wordmark{display:flex;align-items:flex-end;gap:0;margin-bottom:6px}
+.sidebar-wordmark span{font-size:20px;font-weight:700;color:#fff;letter-spacing:2.5px}
+.sidebar-wordmark div{width:40px;height:2px;background:var(--k-jade);margin-bottom:5px;margin-left:2px}
+.sidebar-subtitle{font-size:9px;color:rgba(255,255,255,.45);letter-spacing:.8px;text-transform:uppercase;line-height:1.5}
+.sidebar-campaign{padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.sidebar-campaign-name{font-size:10px;font-weight:600;color:var(--k-jade);letter-spacing:.5px;margin-bottom:3px}
+.sidebar-campaign-sub{font-size:10px;color:rgba(255,255,255,.5);line-height:1.4}
+.nav-section{padding:14px 0 8px}
+.nav-section-label{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.3);padding:0 18px;margin-bottom:6px;font-weight:500}
+.nav-btn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;color:rgba(255,255,255,.6);font-family:inherit;font-size:12px;padding:8px 18px;cursor:pointer;text-align:left;transition:all .15s;border-left:2px solid transparent}
+.nav-btn:hover{color:#fff;background:rgba(255,255,255,.06);border-left-color:rgba(255,255,255,.2)}
+.nav-btn.active{color:#fff;background:rgba(255,255,255,.1);border-left-color:var(--k-jade);font-weight:500}
+.nav-btn .nav-icon{width:18px;height:18px;border-radius:4px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
+.nav-btn.active .nav-icon{background:var(--k-jade);color:var(--k-forest)}
+.sidebar-footer{margin-top:auto;padding:14px 18px;border-top:1px solid rgba(255,255,255,.08)}
+.sidebar-footer-text{font-size:9px;color:rgba(255,255,255,.3);line-height:1.6}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--k-slate);padding:12px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--k-sage);position:sticky;top:0;z-index:50}
+.topbar-title{font-size:13px;font-weight:500;color:#fff}
+.topbar-meta{font-size:10px;color:rgba(255,255,255,.5)}
+.topbar-pills{display:flex;gap:6px}
+.topbar-pill{background:rgba(255,255,255,.1);border:0.5px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 10px;font-size:10px;color:rgba(255,255,255,.8)}
+.topbar-pill.jade{background:rgba(68,207,147,.15);border-color:var(--k-jade);color:var(--k-jade)}
+
+/* ── SECTIONS ── */
+.section{display:none;padding:28px}
+.section.active{display:block}
+
+/* ── SECTION HEADER ── */
+.sec-header{margin-bottom:20px}
+.sec-header h2{font-size:18px;font-weight:300;color:var(--k-slate);padding-bottom:10px;border-bottom:2px solid var(--k-slate-20);margin-bottom:8px}
+.sec-header h2 strong{font-weight:600}
+.sec-header p{font-size:13px;color:#666;line-height:1.65}
+
+/* ── SUBSECTION ── */
+.subsec{margin-top:28px;margin-bottom:12px}
+.subsec h3{font-size:13px;font-weight:600;color:var(--k-slate);text-transform:uppercase;letter-spacing:.6px;padding-bottom:6px;border-bottom:1px solid var(--k-slate-20)}
+
+/* ── DATA CARDS ── */
+.data-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.data-card{background:var(--k-slate);border-radius:12px;padding:18px 16px;text-align:center}
+.data-num{font-size:26px;font-weight:300;color:var(--k-jade);line-height:1;margin-bottom:6px}
+.data-label{font-size:11px;color:rgba(255,255,255,.6);line-height:1.4}
+
+/* ── CARDS ── */
+.grid{display:grid;gap:12px;margin-bottom:20px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:1fr 1fr 1fr}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:0.5px solid #d4d2c8;border-radius:10px;padding:16px}
+.card-label{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:#999;margin-bottom:6px;font-weight:500}
+.card-title{font-size:14px;font-weight:500;color:var(--k-slate);line-height:1.3;margin-bottom:6px}
+.card-body{font-size:12px;color:#555;line-height:1.65}
+.card-sl{border-left:3px solid var(--k-slate);border-radius:0 10px 10px 0}
+.card-sg{border-left:3px solid var(--k-sage)}
+.card-jd{border-left:3px solid var(--k-jade)}
+.card-warn{border-left:3px solid var(--k-sunrise);background:#fffdf0}
+.card-danger{border-left:3px solid var(--k-sunset);background:#fff8f5}
+
+/* ── BADGES ── */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:12px;font-size:10px;font-weight:500;white-space:nowrap}
+.b-ok{background:#e6f9f0;color:#0a6e3f}
+.b-val{background:#fff8e0;color:#7a5500}
+.b-pend{background:#fdecea;color:#c0392b}
+.b-apmea{background:#e8eef7;color:var(--k-slate)}
+.b-req{background:#f5eefc;color:#6a2fa0}
+
+/* ── WARN BOX ── */
+.warn-box{padding:12px 16px;border-radius:8px;font-size:12px;line-height:1.65;margin-bottom:16px}
+.warn-box.yellow{background:#fff8e0;border:0.5px solid var(--k-sunrise);color:#7a5500}
+.warn-box.red{background:#fff3f0;border:0.5px solid var(--k-sunset);color:#8b1a0e}
+.warn-box strong{display:block;margin-bottom:4px;font-size:13px}
+
+/* ── FUNNEL ── */
+.funnel-stage{padding:16px 18px;border-radius:10px;margin-bottom:10px;cursor:default;transition:transform .15s}
+.funnel-stage:hover{transform:translateX(4px)}
+.funnel-arrow{text-align:center;color:var(--k-slate-40);font-size:20px;line-height:1;margin:-4px 0}
+.f-tofu{background:var(--k-slate-20);border-left:4px solid var(--k-slate)}
+.f-mofu{background:#e0f5ef;border-left:4px solid var(--k-sage)}
+.f-lofu{background:#e6faf2;border-left:4px solid var(--k-jade)}
+.funnel-band{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:5px}
+.funnel-title{font-size:14px;font-weight:500;margin-bottom:5px}
+.funnel-body{font-size:12px;color:#555;line-height:1.55;margin-bottom:10px}
+.funnel-chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{background:rgba(255,255,255,.7);border:0.5px solid rgba(0,87,118,.2);border-radius:4px;padding:3px 8px;font-size:10px;color:var(--k-slate);font-weight:500}
+
+/* ── FLOW STRIP ── */
+.flow-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-radius:10px;overflow:hidden;border:0.5px solid var(--k-slate-20);margin-bottom:20px}
+.flow-step{padding:14px 12px;text-align:center}
+.flow-step-num{font-size:9px;letter-spacing:1px;opacity:.6;margin-bottom:5px;text-transform:uppercase}
+.flow-step-title{font-size:11px;font-weight:600;line-height:1.3;margin-bottom:4px}
+.flow-step-sub{font-size:10px;opacity:.7;line-height:1.4}
+
+/* ── PROCESS 4-STEP ── */
+.process4{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:10px;overflow:hidden;border:0.5px solid var(--k-slate-20)}
+.p4-step{padding:14px;border-right:1px solid var(--k-slate-20)}
+.p4-step:last-child{border-right:none}
+.p4-num{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;margin-bottom:8px}
+.p4-title{font-size:11px;font-weight:600;margin-bottom:5px}
+.p4-body{font-size:10px;color:#666;line-height:1.55}
+
+/* ── TIMELINE ── */
+.tl-list{position:relative;padding-left:40px}
+.tl-list::before{content:'';position:absolute;left:13px;top:14px;bottom:14px;width:1.5px;background:var(--k-slate-20)}
+.tl-item{position:relative;margin-bottom:22px}
+.tl-dot{position:absolute;left:-40px;top:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;border:2px solid #f4f4ee;z-index:1}
+.tl-dot.slate{background:var(--k-slate);box-shadow:0 0 0 3px rgba(0,87,118,.2)}
+.tl-dot.sage{background:var(--k-sage);box-shadow:0 0 0 3px rgba(40,155,162,.2)}
+.tl-dot.jade{background:#0a6e3f;box-shadow:0 0 0 3px rgba(68,207,147,.2)}
+.tl-dot.gray{background:#888;box-shadow:0 0 0 3px rgba(136,136,136,.15)}
+.tl-week{font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#999;font-weight:500;margin-bottom:3px}
+.tl-title{font-size:13px;font-weight:600;color:var(--k-slate);margin-bottom:5px}
+.tl-desc{font-size:12px;color:#555;line-height:1.6;margin-bottom:6px}
+.tl-tags{display:flex;flex-wrap:wrap;gap:5px}
+
+/* ── ROLES ── */
+.role-card{border-radius:10px;overflow:hidden;margin-bottom:14px;border:0.5px solid #d4d2c8}
+.role-header{padding:14px 16px;display:flex;align-items:center;gap:12px}
+.role-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.role-name{font-size:14px;font-weight:600;color:#fff;margin-bottom:2px}
+.role-sub{font-size:10px;color:rgba(255,255,255,.6)}
+.role-tasks{background:#fafaf7;padding:0 16px}
+.task-row{display:flex;gap:10px;padding:11px 0;border-bottom:0.5px solid #efefea;align-items:flex-start}
+.task-row:last-child{border-bottom:none}
+.task-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;margin-top:1px}
+.task-text{font-size:12px;color:#444;line-height:1.55}
+.task-text strong{color:var(--k-slate)}
+
+/* ── ASSET TABLE ── */
+.table-wrap{overflow-x:auto;border-radius:10px;border:0.5px solid #d4d2c8;margin-bottom:20px}
+.asset-table{width:100%;font-size:11px;border-collapse:collapse;min-width:620px}
+.asset-table th{background:var(--k-slate);color:#fff;padding:9px 12px;text-align:left;font-weight:500;font-size:10px;letter-spacing:.5px;white-space:nowrap}
+.asset-table th:first-child{border-radius:10px 0 0 0}
+.asset-table th:last-child{border-radius:0 10px 0 0}
+.asset-table td{padding:9px 12px;border-bottom:0.5px solid #eeeee8;vertical-align:middle}
+.asset-table tr:last-child td{border-bottom:none}
+.asset-table tr:nth-child(even) td{background:#f9f9f5}
+.asset-table tr:hover td{background:#f0f4f7;transition:background .1s}
+
+/* ── PROGRESS ── */
+.progress-item{margin-bottom:12px}
+.progress-label-row{display:flex;justify-content:space-between;font-size:11px;color:#555;margin-bottom:4px}
+.progress-bar{height:6px;background:#e8e8e0;border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;border-radius:3px}
+
+/* ── CHECKLIST ── */
+.cl-group{margin-bottom:16px}
+.cl-group-title{font-size:11px;font-weight:600;color:var(--k-slate);letter-spacing:.5px;text-transform:uppercase;padding:7px 12px;background:var(--k-slate-20);border-radius:7px;margin-bottom:6px}
+.cl-item{display:flex;gap:10px;padding:9px 8px;border-bottom:0.5px solid #efefea;align-items:flex-start;cursor:pointer;transition:background .12s;border-radius:6px}
+.cl-item:hover{background:#f5f5ef}
+.cl-check{width:18px;height:18px;border:1.5px solid #bbb;border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;transition:all .15s}
+.cl-check.done{background:var(--k-sage);border-color:var(--k-sage)}
+.cl-text{font-size:12px;color:#444;line-height:1.55;flex:1}
+.cl-meta{font-size:10px;color:#999;margin-top:3px}
+.cl-item.is-done .cl-text{text-decoration:line-through;color:#aaa}
+
+/* ── COPY BLOCKS ── */
+.copy-block{background:#fff;border:0.5px solid #d4d2c8;border-radius:10px;overflow:hidden;margin-bottom:12px}
+.copy-head{background:var(--k-slate);padding:9px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.copy-head-title{font-size:11px;font-weight:500;color:#fff;letter-spacing:.2px}
+.copy-body{padding:13px 16px;font-size:12px;line-height:1.75;color:#333;border-left:3px solid transparent}
+.copy-body.ok{border-left-color:var(--k-jade)}
+.copy-body.val{border-left-color:var(--k-sunrise)}
+.copy-mono{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;background:#f9f9f5;padding:12px 16px;border-left:3px solid var(--k-jade);color:#333}
+.copy-mono.val{border-left-color:var(--k-sunrise)}
+
+/* ── BRAND ── */
+.palette-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.swatch{height:52px;border-radius:8px;display:flex;align-items:flex-end;padding:6px 8px;position:relative}
+.swatch-label{font-size:9px;font-weight:600;background:rgba(0,0,0,.45);color:#fff;padding:2px 6px;border-radius:3px}
+.swatch-hex{font-size:8px;font-family:'IBM Plex Mono',monospace;color:rgba(255,255,255,.75);margin-top:2px}
+.type-demo{background:#fff;border:0.5px solid #d4d2c8;border-radius:10px;padding:16px;text-align:center}
+.type-demo-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#999;margin-bottom:10px}
+.brand-rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.rule-card{background:#fff;border:0.5px solid #d4d2c8;border-radius:10px;padding:14px}
+.rule-ok{border-top:3px solid var(--k-jade)}
+.rule-no{border-top:3px solid var(--k-sunset)}
+.rule-card h4{font-size:11px;font-weight:600;margin-bottom:10px}
+.rule-list li{font-size:11px;color:#555;line-height:1.7;padding-left:4px}
+
+/* ── CONTACTS ── */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.contact-card{background:#fff;border:0.5px solid #d4d2c8;border-radius:8px;padding:12px}
+.contact-name{font-size:13px;font-weight:600;color:var(--k-slate);margin-bottom:2px}
+.contact-role{font-size:10px;color:#888;margin-bottom:6px}
+.contact-scope{font-size:11px;color:#555;line-height:1.5}
+
+/* ── SPACERS ── */
+.sp{height:20px}
+.sp-sm{height:10px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .sidebar{width:180px}
+  .main{margin-left:180px}
+  .g4,.g3,.g2{grid-template-columns:1fr 1fr}
+  .data-row{grid-template-columns:repeat(3,1fr)}
+  .process4{grid-template-columns:1fr 1fr}
+  .p4-step:nth-child(2){border-right:none}
+  .p4-step:nth-child(3){border-top:1px solid var(--k-slate-20)}
+  .flow-strip{grid-template-columns:1fr 1fr 1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .sidebar{display:none}
+  .main{margin-left:0}
+  .section{padding:16px}
+  .g2,.g3,.g4,.data-row,.process4,.palette-row,.brand-rules,.contact-grid{grid-template-columns:1fr}
+  .flow-strip{grid-template-columns:1fr}
+  .topbar{flex-direction:column;align-items:flex-start;gap:6px}
+  .topbar-pills{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-wordmark">
+        <span>KERRY</span><div></div>
+      </div>
+      <div class="sidebar-subtitle">H&amp;T Marketing<br>TGT Studio · Abril 2026</div>
+    </div>
+    <div class="sidebar-campaign">
+      <div class="sidebar-campaign-name">Sensoril® PT2</div>
+      <div class="sidebar-campaign-sub">Menopause Global Push<br>Guia de Execução</div>
+    </div>
+    <nav class="nav-section">
+      <div class="nav-section-label">Estratégia</div>
+      <button class="nav-btn active" onclick="show('overview',this)">
+        <span class="nav-icon">◎</span>Visão Geral
+      </button>
+      <button class="nav-btn" onclick="show('roles',this)">
+        <span class="nav-icon">⊕</span>Papéis TGT/Kerry
+      </button>
+      <button class="nav-btn" onclick="show('flow',this)">
+        <span class="nav-icon">▷</span>Fluxo da Campanha
+      </button>
+    </nav>
+    <nav class="nav-section">
+      <div class="nav-section-label">Execução</div>
+      <button class="nav-btn" onclick="show('timeline',this)">
+        <span class="nav-icon">◷</span>Timeline
+      </button>
+      <button class="nav-btn" onclick="show('assets',this)">
+        <span class="nav-icon">☰</span>Assets &amp; Status
+      </button>
+      <button class="nav-btn" onclick="show('checklist',this)">
+        <span class="nav-icon">✓</span>Checklist Giovana
+      </button>
+    </nav>
+    <nav class="nav-section">
+      <div class="nav-section-label">Conteúdo</div>
+      <button class="nav-btn" onclick="show('copy',this)">
+        <span class="nav-icon">✎</span>Copy Desk
+      </button>
+      <button class="nav-btn" onclick="show('brand',this)">
+        <span class="nav-icon">◈</span>Brand Guide
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-text">Prepared by TGT Studio<br>Marketing Support · H&amp;T Team<br>Suporte à Giovana G. Gonzales</div>
+    </div>
+  </aside>
+
+  <!-- ═══ MAIN ═══ -->
+  <main class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div>
+        <div class="topbar-title" id="topbar-title">Visão Geral Estratégica</div>
+        <div class="topbar-meta">Sensoril® Ashwagandha · Menopause Global Push PT2</div>
+      </div>
+      <div class="topbar-pills">
+        <span class="topbar-pill jade">✓ Copy aprovado por Mollie</span>
+        <span class="topbar-pill">🌍 Campanha Global</span>
+        <span class="topbar-pill">Abr–Jun 2026</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 1 — VISÃO GERAL
+    ═══════════════════════════════════════ -->
+    <div class="section active" id="s-overview">
+      <div class="sec-header">
+        <h2><strong>Sensoril® Ashwagandha</strong> — Menopause Global Push PT2</h2>
+        <p>Campanha B2B de awareness + lead generation para formuladores e key accounts de supplements. Nova publicação clínica âncora a mensagem central: qualidade de vida em menopausa <em>e</em> saúde óssea — duplo diferencial de mercado.</p>
+      </div>
+
+      <div class="data-row">
+        <div class="data-card">
+          <div class="data-num">47M</div>
+          <div class="data-label">Mulheres/ano entrando na menopausa até 2030</div>
+        </div>
+        <div class="data-card">
+          <div class="data-num">80%</div>
+          <div class="data-label">Experienciam 40+ sintomas relacionados à menopausa</div>
+        </div>
+        <div class="data-card">
+          <div class="data-num">€750k</div>
+          <div class="data-label">Pipeline influenciado pelo PT1 via Salesforce (referência)</div>
+        </div>
+      </div>
+
+      <div class="grid g2">
+        <div class="card card-sl">
+          <div class="card-label">Produto</div>
+          <div class="card-title">Sensoril® Ashwagandha</div>
+          <div class="card-body">Extrato de raiz + folha de alta pureza. Dose eficaz: <strong>250 mg/day</strong>. Único ingrediente com dados clínicos específicos para menopausa.</div>
+        </div>
+        <div class="card card-sg">
+          <div class="card-label">Upgrade PT2 vs PT1</div>
+          <div class="card-title">Bone Health adicionado à proposta</div>
+          <div class="card-body">PT1 (2025) = apenas MenQol (qualidade de vida). PT2 adiciona evidência de saúde óssea — marcadores de remodelação óssea. Novo segmento de oportunidade.</div>
+        </div>
+        <div class="card card-jd">
+          <div class="card-label">Publicação Âncora PT2</div>
+          <div class="card-title">Gynecological &amp; Reproductive Endocrinology and Metabolism</div>
+          <div class="card-body">Poster abstracts março 2026. Short paper mai/jun 2026. Confirma relevância <em>clínica</em> (não só estatística) dos resultados, e efeito positivo nos marcadores de bone turnover.</div>
+        </div>
+        <div class="card card-sl">
+          <div class="card-label">Mensagem Central</div>
+          <div class="card-title">Science That Supports Her</div>
+          <div class="card-body">Nova análise clínica: qualidade de vida EM menopausa + saúde óssea. Duplo diferencial para formuladores, R&amp;D e key accounts focados em women's health.</div>
+        </div>
+      </div>
+
+      <div class="subsec"><h3>Audiência-Alvo B2B</h3></div>
+      <div class="grid g2">
+        <div class="card">
+          <div class="card-label">Segmento 1 — Relevância Clínica</div>
+          <div class="card-title">Key accounts globais (Nestlé, P&amp;G etc.)</div>
+          <div class="card-body">Compradores técnicos, R&amp;D, regulatory. Motivador: diferenciação científica, rigor metodológico, relevância clínica validada. PT2 entrega nível de evidência acima da média do mercado.</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Segmento 2 — Bone Health (novo PT2)</div>
+          <div class="card-title">Marcas Women's Health pós-menopausa</div>
+          <div class="card-body">Foco em estilo de vida ativo pós-menopausa. Motivador: ingrediente com dados específicos de bone turnover — lacuna real de mercado identificada em 2025. Até 20% da perda óssea ocorre na transição menopáusica.</div>
+        </div>
+      </div>
+
+      <div class="warn-box yellow">
+        <strong>⚠️ Pré-requisito obrigatório — Não pular esta etapa</strong>
+        O Campaign Brief determina explicitamente que nenhum asset deve ser desenvolvido antes de validar o Customer Journey com o Digital Lead. Esta validação é mandatória. Não execute nenhuma peça sem esta etapa concluída.
+      </div>
+
+      <div class="subsec"><h3>Dados Técnicos de Referência</h3></div>
+      <div class="grid g2" style="font-size:11px">
+        <div class="card" style="background:var(--k-stone)">
+          <div class="card-label">Dados clínicos — não alterar sem validação científica</div>
+          <table style="width:100%;border-collapse:collapse;font-size:11px">
+            <tr><td style="padding:4px 0;color:#888;width:45%">Dose eficaz</td><td style="font-family:'IBM Plex Mono',monospace;font-weight:500">250 mg/day</td></tr>
+            <tr style="border-top:0.5px solid #e0e0d8"><td style="padding:4px 0;color:#888">Publicação PT1</td><td>Journal of Menopausal Medicine (2025)</td></tr>
+            <tr style="border-top:0.5px solid #e0e0d8"><td style="padding:4px 0;color:#888">Publicação PT2</td><td>Gynecological &amp; Reproductive Endocrinology (2026)</td></tr>
+            <tr style="border-top:0.5px solid #e0e0d8"><td style="padding:4px 0;color:#888">Bone loss ref.</td><td>Até 20% da perda óssea na transição</td></tr>
+            <tr style="border-top:0.5px solid #e0e0d8"><td style="padding:4px 0;color:#888">Osteoporose</td><td>1 em cada 10 mulheres +60 anos</td></tr>
+          </table>
+        </div>
+        <div class="card" style="background:var(--k-stone)">
+          <div class="card-label">UTM e hashtags de campanha</div>
+          <table style="width:100%;border-collapse:collapse;font-size:11px">
+            <tr><td style="padding:4px 0;color:#888;width:40%">UTM campaign</td><td style="font-family:'IBM Plex Mono',monospace;font-size:10px">26gl-ph-sensoril-womens-health</td></tr>
+            <tr style="border-top:0.5px solid #e0e0d8"><td style="padding:4px 0;color:#888">Hashtags GL</td><td style="font-size:10px">#WomensHealth #Menopause #ProActiveHealth #Sensoril #Ashwagandha</td></tr>
+            <tr style="border-top:0.5px solid #e0e0d8"><td style="padding:4px 0;color:#888">Post 3 +</td><td style="font-size:10px">#BoneHealth</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 2 — PAPÉIS
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-roles">
+      <div class="sec-header">
+        <h2>Divisão de <strong>Papéis</strong>: TGT Studio ↔ Kerry (Giovana)</h2>
+        <p>Estrutura de responsabilidades durante a cobertura da licença maternidade da Thaís Siqueira Claro (PO). TGT dá suporte integral em todo o processo.</p>
+      </div>
+
+      <!-- TGT -->
+      <div class="role-card">
+        <div class="role-header" style="background:var(--k-slate)">
+          <div class="role-avatar" style="background:var(--k-sage)">TGT</div>
+          <div>
+            <div class="role-name">TGT Studio</div>
+            <div class="role-sub">Eduardo Rocha e Silva · Camille Audibert · Luiza Medeiros</div>
+          </div>
+          <span class="badge b-ok" style="margin-left:auto">Produção &amp; Suporte</span>
+        </div>
+        <div class="role-tasks">
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-slate)">1</div>
+            <div class="task-text"><strong>Decupagem do briefing</strong> — Análise e estruturação de todos os materiais recebidos (Campaign Brief, Channel Briefs, Copy Review da Mollie). Extração do briefing estratégico e tático completo.</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-slate)">2</div>
+            <div class="task-text"><strong>Desenho da campanha</strong> — Criação do fluxo de campanha (TOFU/MOFU/LOFU), Customer Journey e arquitetura de canais dentro do toolkit usual do cliente Kerry.</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-slate)">3</div>
+            <div class="task-text"><strong>Criação de textos (copy)</strong> — Desenvolvimento de copy para todos os canais: LinkedIn orgânico, email Marketo, landing page, newsletters Health Edge, trade media NutraIngredients e Kerry Digest.</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-slate)">4</div>
+            <div class="task-text"><strong>Montagem de artes</strong> — Produção das peças visuais dentro dos templates e brand guidelines Kerry / ProActive Health, conforme guia de marca oficial.</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-sage)">5</div>
+            <div class="task-text"><strong>Suporte contínuo à Giovana</strong> — Apoio em todo o processo: revisão de briefings para agências, dúvidas operacionais, validação de copy, orientação sobre plataformas Marketo/Workfront, e acompanhamento de go-live.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GIOVANA -->
+      <div class="role-card">
+        <div class="role-header" style="background:var(--k-sage)">
+          <div class="role-avatar" style="background:var(--k-forest)">GG</div>
+          <div>
+            <div class="role-name">Giovana Geniselli Gonzales</div>
+            <div class="role-sub">Analista de Marketing · Kerry H&amp;T · Execução da campanha</div>
+          </div>
+          <span class="badge b-ok" style="margin-left:auto">Execução</span>
+        </div>
+        <div class="role-tasks">
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-sage)">A</div>
+            <div class="task-text"><strong>Fluxo interno — Landing Pages &amp; Email Marketo</strong> — Coordena com agência in-house Kerry para configuração técnica no Marketo, preenchimento de copy decks no Workfront, envio de briefings, assets e informações técnicas.</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-sage)">B</div>
+            <div class="task-text"><strong>Briefings para agência europeia</strong> — Envia briefings, assets aprovados e informações técnicas para a agência da Europa implantar as campanhas online (LinkedIn Paid EU, formatos regionais).</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-sage)">C</div>
+            <div class="task-text"><strong>Validação &amp; go-live</strong> — Confirma go-live em cada data, insere UTM links finais (após recebimento da Mollie), agenda publicação dos posts LinkedIn, acompanha status dos itens pendentes regionais.</div>
+          </div>
+          <div class="task-row">
+            <div class="task-num" style="background:var(--k-sage)">D</div>
+            <div class="task-text"><strong>Alinhamento com leads regionais</strong> — Andrea (EU), Mindy (NA), Sonia (APMEA). Acompanha status de campanha paga e ativos regionais. Itens marcados [APMEA] são responsabilidade primária da Sonia.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOLLIE -->
+      <div class="role-card">
+        <div class="role-header" style="background:#5a6775">
+          <div class="role-avatar" style="background:var(--k-sunset)">ML</div>
+          <div>
+            <div class="role-name">Mollie Mulligan</div>
+            <div class="role-sub">Global Campaign Lead · Kerry</div>
+          </div>
+          <span class="badge b-val" style="margin-left:auto">Aprovação Global</span>
+        </div>
+        <div class="role-tasks">
+          <div class="task-row">
+            <div class="task-num" style="background:#999">✓</div>
+            <div class="task-text">Validação final de copy e assets globais. UTM links finais (previsto 17/abr). Storytelling Card body (aprovação antes de usar). Kerry Digest Article. Stationary Kit. Press Release via CA.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp"></div>
+      <div class="subsec"><h3>Processo de Briefing em 4 Etapas</h3></div>
+      <div class="process4">
+        <div class="p4-step" style="background:var(--k-slate-20)">
+          <div class="p4-num" style="background:var(--k-slate)">1</div>
+          <div class="p4-title" style="color:var(--k-slate)">Campaign Brief</div>
+          <div class="p4-body">Mollie (GL) define produto, objetivo, audiência, mensagem, canais, budget, timeline. Documento-raiz da campanha.</div>
+        </div>
+        <div class="p4-step" style="background:#e8f5f6">
+          <div class="p4-num" style="background:var(--k-sage)">2</div>
+          <div class="p4-title" style="color:var(--k-sage)">Customer Journey</div>
+          <div class="p4-body">PO mapeia fluxo digital: canal → conversão → nutrição. <strong>Validar com Digital Lead ANTES de produzir qualquer asset. Obrigatório.</strong></div>
+        </div>
+        <div class="p4-step" style="background:#f0f5f7">
+          <div class="p4-num" style="background:var(--k-slate-60)">3</div>
+          <div class="p4-title" style="color:var(--k-slate-60)">Brief por Canal</div>
+          <div class="p4-body">Para cada asset (LP, email, LinkedIn) há um brief específico com componentes, limites de caracteres e copy deck no Workfront.</div>
+        </div>
+        <div class="p4-step" style="background:#eafaf3">
+          <div class="p4-num" style="background:var(--k-jade)">4</div>
+          <div class="p4-title" style="color:var(--k-forest)">Copy Review</div>
+          <div class="p4-body">Mollie compartilha rascunho. Thaís/Giovana validam tom, precisão técnica e aderência ao template. Só então executar.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 3 — FLUXO
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-flow">
+      <div class="sec-header">
+        <h2>Arquitetura da Campanha: <strong>TOFU → MOFU → LOFU</strong></h2>
+        <p>Campanha B2B de awareness + lead generation. Fluxo digital do awareness até captura de MQL via gated content. Validar Customer Journey com Digital Lead antes de executar.</p>
+      </div>
+
+      <div class="funnel-stage f-tofu">
+        <div class="funnel-band" style="color:var(--k-slate)">TOFU — Topo do Funil · Awareness</div>
+        <div class="funnel-title">Gerar visibilidade da nova publicação e upgrade bone health</div>
+        <div class="funnel-body">Objetivo: fazer com que o público-alvo B2B saiba que existe nova evidência clínica sobre Sensoril® — qualidade de vida + saúde óssea. Mensagem-chave = <em>Science That Supports Her</em>. Key visual como âncora visual da campanha.</div>
+        <div class="funnel-chips">
+          <span class="chip">LinkedIn Orgânico — 3 posts</span>
+          <span class="chip">LinkedIn Paid EU/NA/LATAM</span>
+          <span class="chip">NutraIngredients NA</span>
+          <span class="chip">Social Kerry Pages</span>
+          <span class="chip">Kerry Digest (interno)</span>
+        </div>
+      </div>
+      <div class="funnel-arrow">↓</div>
+
+      <div class="funnel-stage f-mofu">
+        <div class="funnel-band" style="color:#0a6e3f">MOFU — Meio do Funil · Consideração</div>
+        <div class="funnel-title">Engajar audiência técnica com infográfico e evidência científica</div>
+        <div class="funnel-body">Objetivo: aprofundar o argumento científico, apresentar dados de dose (250 mg/day), posicionar o duplo diferencial qualidade de vida + bone health para formuladores e R&amp;D. Email Marketo como peça central de engajamento.</div>
+        <div class="funnel-chips">
+          <span class="chip">Email Marketo Global (5/mai)</span>
+          <span class="chip">Health Edge Newsletter</span>
+          <span class="chip">Landing Page Marketo</span>
+        </div>
+      </div>
+      <div class="funnel-arrow">↓</div>
+
+      <div class="funnel-stage f-lofu">
+        <div class="funnel-band" style="color:#0a6e3f">LOFU — Fundo do Funil · Conversão</div>
+        <div class="funnel-title">Capturar MQLs via gated content na landing page Marketo</div>
+        <div class="funnel-body">Objetivo: converter interesse em lead qualificado. Visitante preenche formulário Marketo → acessa Women's Health Library → MQL tracking via Salesforce. CTA: <em>Access Now</em>.</div>
+        <div class="funnel-chips">
+          <span class="chip">Landing Page Marketo + Form</span>
+          <span class="chip">Women's Health Library</span>
+          <span class="chip">MQL → Salesforce</span>
+        </div>
+      </div>
+
+      <div class="sp"></div>
+      <div class="subsec"><h3>Fluxo de Produção: TGT → Kerry → Agências</h3></div>
+      <div class="flow-strip">
+        <div class="flow-step" style="background:var(--k-slate);color:#fff">
+          <div class="flow-step-num">Etapa 1</div>
+          <div class="flow-step-title">Brief recebido</div>
+          <div class="flow-step-sub">Mollie (GL) → TGT Studio</div>
+        </div>
+        <div class="flow-step" style="background:var(--k-slate-80);color:#fff">
+          <div class="flow-step-num">Etapa 2</div>
+          <div class="flow-step-title">Decupagem TGT</div>
+          <div class="flow-step-sub">Análise e estruturação dos materiais</div>
+        </div>
+        <div class="flow-step" style="background:var(--k-sage);color:#fff">
+          <div class="flow-step-num">Etapa 3</div>
+          <div class="flow-step-title">Criação TGT</div>
+          <div class="flow-step-sub">Copy · Arte · Fluxo · Design</div>
+        </div>
+        <div class="flow-step" style="background:var(--k-slate-60);color:#fff">
+          <div class="flow-step-num">Etapa 4</div>
+          <div class="flow-step-title">Giovana executa</div>
+          <div class="flow-step-sub">Marketo · Workfront · LinkedIn</div>
+        </div>
+        <div class="flow-step" style="background:var(--k-jade);color:var(--k-forest)">
+          <div class="flow-step-num">Etapa 5</div>
+          <div class="flow-step-title">Agências ativam</div>
+          <div class="flow-step-sub">In-house Kerry + Agência Europa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 4 — TIMELINE
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-timeline">
+      <div class="sec-header">
+        <h2>Timeline de Execução · <strong>Abril – Junho 2026</strong></h2>
+        <p>Sequência cronológica semana a semana. Itens marcados [APMEA] são responsabilidade primária da Sonia — Giovana pode ser acionada para suporte, mas não é responsável.</p>
+      </div>
+
+      <div class="tl-list">
+
+        <div class="tl-item">
+          <div class="tl-dot slate">13<br><span style="font-size:7px">ABR</span></div>
+          <div class="tl-week">Semana 13 Abril — Pré-lançamento</div>
+          <div class="tl-title">Validação Customer Journey + Alinhamento interno</div>
+          <div class="tl-desc">Giovana valida Customer Journey com Digital Lead (pré-requisito obrigatório — não pular). Alinha com Mollie sobre UTM links. Preenche copy deck da landing page no Workfront: Eyebrow, Hero Title, Intro, Bullets, Form Title, CTA. Nomeia e anexa imagens: <code style="font-size:10px;background:#f0f0ea;padding:1px 5px;border-radius:3px">hero_sensoril.jpg</code> e <code style="font-size:10px;background:#f0f0ea;padding:1px 5px;border-radius:3px">storytelling_sensoril.jpg</code>.</div>
+          <div class="tl-tags">
+            <span class="badge b-req">⚠️ Pré-requisito obrigatório</span>
+            <span class="badge b-ok">Giovana + Digital Lead</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot sage">15<br><span style="font-size:7px">ABR</span></div>
+          <div class="tl-week">15 Abril — LAUNCH · Canais Orgânicos</div>
+          <div class="tl-title">Go-live: Landing Page Marketo + LinkedIn Orgânico</div>
+          <div class="tl-desc">Landing page Marketo ao ar. Posts LinkedIn orgânicos publicados nos perfis Kerry, Kerry Health Solutions e Kerry Pharma. NutraIngredients NA (responsabilidade: Mindy). Key visual "Science That Supports Her" publicada.</div>
+          <div class="tl-tags">
+            <span class="badge b-ok">✅ Copy aprovado por Mollie</span>
+            <span class="badge" style="background:var(--k-slate-20);color:var(--k-slate)">LP deadline: 20/abr</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot slate">17<br><span style="font-size:7px">ABR</span></div>
+          <div class="tl-week">17 Abril</div>
+          <div class="tl-title">UTM links finais — aguardar confirmação da Mollie</div>
+          <div class="tl-desc">Mollie envia UTM links finais para os 3 posts LinkedIn. Giovana aplica UTMs nos posts e agenda publicação. Confirmar hashtags: Posts 1 e 2 = #WomensHealth #Menopause #ProActiveHealth #Sensoril #Ashwagandha — Post 3 adiciona #BoneHealth.</div>
+          <div class="tl-tags"><span class="badge b-val">Aguardando Mollie</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot slate">4 Mai<br><span style="font-size:7px">–5 Jun</span></div>
+          <div class="tl-week">4 Maio – 5 Junho</div>
+          <div class="tl-title">LinkedIn Paid — EU, NA, LATAM</div>
+          <div class="tl-desc">Andrea (EU), Mindy (NA) e LATAM ativam campanha LinkedIn Paid. Mesmos assets aprovados, adaptação regional mínima. Brief enviado em 11/03. Giovana acompanha status junto às leads regionais.</div>
+          <div class="tl-tags"><span class="badge b-pend">🔴 Pendente — responsabilidade regional</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot sage">5<br><span style="font-size:7px">MAI</span></div>
+          <div class="tl-week">5 Maio</div>
+          <div class="tl-title">Email Marketo — Disparo Global</div>
+          <div class="tl-desc">Disparo único, sem resend, sem regionalização. Subject line obrigatório: <strong>"Clinically backed support for menopause"</strong>. Preheader: "Explore new clinical findings showing meaningful menopause support at 250 mg/day." Banner: SCIENCE THAT SUPPORTS HER. Personalização %FIRSTNAME%.</div>
+          <div class="tl-tags">
+            <span class="badge b-ok">✅ Copy aprovado</span>
+            <span class="badge b-req">⚠️ Subject line — ver Copy Desk</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot sage">7<br><span style="font-size:7px">MAI</span></div>
+          <div class="tl-week">7 Maio</div>
+          <div class="tl-title">Vitafoods Europe — Evento Presencial</div>
+          <div class="tl-desc">Reforço da mensagem presencialmente. PR se aplicável — Mollie coordena com CA.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot slate">18<br><span style="font-size:7px">MAI</span></div>
+          <div class="tl-week">18 Maio</div>
+          <div class="tl-title">Health Edge Newsletter</div>
+          <div class="tl-desc">Giovana e Andrea produzem artigo editorial. Base: copy do email + infográfico. Tom editorial, não publicitário. Revisar com Andrea antes de publicar. Copy sugerido pelo TGT disponível na aba Copy Desk.</div>
+          <div class="tl-tags"><span class="badge b-val">🟡 Validar com Andrea</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot gray">Jun<br><span style="font-size:7px">WC1</span></div>
+          <div class="tl-week">Junho wc 1 — [APMEA]</div>
+          <div class="tl-title">LinkedIn Orgânico APMEA</div>
+          <div class="tl-desc">Sonia adapta posts EU/NA para APMEA. Responsabilidade: Sonia/Thaís. Giovana pode ser acionada para suporte, não é responsável primária.</div>
+          <div class="tl-tags"><span class="badge b-apmea">[APMEA] Responsabilidade: Sonia</span></div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot gray">Jun<br><span style="font-size:7px">WC8</span></div>
+          <div class="tl-week">Junho wc 8 — [APMEA]</div>
+          <div class="tl-title">LinkedIn Paid APMEA + NutraIngredients APAC</div>
+          <div class="tl-desc">LinkedIn Paid APMEA (Sonia/Thaís). NutraIngredients APAC newsletter + mailshot (Sonia). Material due: 22/jun. Publicação: 18–29/jun.</div>
+          <div class="tl-tags"><span class="badge b-apmea">[APMEA] Responsabilidade: Sonia</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 5 — ASSETS
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-assets">
+      <div class="sec-header">
+        <h2>Mapa Completo de <strong>Assets</strong> e Status</h2>
+        <p>Visão consolidada de todos os 16 assets da campanha com responsável, deadline e região.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+        <span class="badge b-ok">✅ Aprovado — executar</span>
+        <span class="badge b-val">🟡 Validar antes de publicar</span>
+        <span class="badge b-pend">🔴 Pendente outra pessoa</span>
+        <span class="badge b-apmea">[APMEA] Responsabilidade: Sonia</span>
+        <span class="badge b-req">⚠️ Pré-requisito</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="asset-table">
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Status</th>
+              <th>Responsável</th>
+              <th>Deadline</th>
+              <th>Publicação</th>
+              <th>Região</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Landing Page Marketo</strong></td><td><span class="badge b-ok">✅ Copy pronto</span></td><td>Giovana</td><td>Abr 15</td><td>Abr 20</td><td>GL</td></tr>
+            <tr><td><strong>Email Marketo Global</strong></td><td><span class="badge b-ok">✅ Copy pronto</span></td><td>Giovana</td><td>—</td><td>5 Mai</td><td>GL</td></tr>
+            <tr><td><strong>LinkedIn Orgânico (3 posts)</strong></td><td><span class="badge b-ok">✅ Copy pronto</span></td><td>Giovana</td><td>Abr 17 (UTM)</td><td>Abr 15+</td><td>GL</td></tr>
+            <tr><td><strong>Storytelling Card (LP)</strong></td><td><span class="badge b-val">🟡 Validar Mollie</span></td><td>Giovana + Mollie</td><td>Abr 15</td><td>Com LP</td><td>GL</td></tr>
+            <tr><td><strong>LinkedIn Paid</strong></td><td><span class="badge b-pend">🔴 Pendente</span></td><td>Andrea/Mindy/Thaís</td><td>—</td><td>4 Mai–5 Jun</td><td>EU/NA/LATAM</td></tr>
+            <tr><td><strong>Social Kerry Pages</strong></td><td><span class="badge b-pend">🔴 Pendente</span></td><td>Mollie/Giovana</td><td>Abr 15</td><td>Abr 15+</td><td>GL</td></tr>
+            <tr><td><strong>Health Edge Newsletter</strong></td><td><span class="badge b-val">🟡 Validar Andrea</span></td><td>Andrea/Giovana</td><td>—</td><td>18 Mai</td><td>EU/NA</td></tr>
+            <tr><td><strong>Kerry Digest Article</strong></td><td><span class="badge b-val">🟡 Validar Mollie</span></td><td>Mollie/CPG</td><td>—</td><td>TBD</td><td>GL</td></tr>
+            <tr><td><strong>NutraIngredients NA</strong></td><td><span class="badge b-pend">🔴 Pendente</span></td><td>Mindy</td><td>—</td><td>Abr 15</td><td>NA</td></tr>
+            <tr><td><strong>Stationary Kit</strong></td><td><span class="badge b-pend">🔴 Pendente</span></td><td>Mollie</td><td>—</td><td>TBD</td><td>GL</td></tr>
+            <tr><td><strong>Press Release</strong></td><td><span class="badge b-pend">🔴 A avaliar</span></td><td>Mollie + CA</td><td>—</td><td>TBD</td><td>GL</td></tr>
+            <tr><td><strong>Customer Journey</strong></td><td><span class="badge b-req">⚠️ Pré-req.</span></td><td>Giovana + Digital Lead</td><td>Wk 13 abr</td><td>—</td><td>GL</td></tr>
+            <tr><td style="color:#999">NutraIngredients APMEA</td><td><span class="badge b-apmea">[APMEA]</span></td><td>Sonia</td><td>22/jun</td><td>18–29/jun</td><td>APMEA</td></tr>
+            <tr><td style="color:#999">LinkedIn Orgânico APMEA</td><td><span class="badge b-apmea">[APMEA]</span></td><td>Sonia/Thaís</td><td>—</td><td>Jun wc 1</td><td>APMEA</td></tr>
+            <tr><td style="color:#999">LinkedIn Paid APMEA</td><td><span class="badge b-apmea">[APMEA]</span></td><td>Sonia/Thaís</td><td>—</td><td>Jun wc 8</td><td>APMEA</td></tr>
+            <tr><td style="color:#999">Health Edge APMEA</td><td><span class="badge b-apmea">[APMEA]</span></td><td>Xin Ying/Sonia</td><td>—</td><td>TBD</td><td>APMEA</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsec"><h3>Progresso por Canal</h3></div>
+      <div style="max-width:560px">
+        <div class="progress-item">
+          <div class="progress-label-row"><span>Landing Page Marketo</span><span style="color:var(--k-sage);font-weight:600">75%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:75%;background:var(--k-sage)"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label-row"><span>Email Marketo Global</span><span style="color:var(--k-sage);font-weight:600">60%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:60%;background:var(--k-sage)"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label-row"><span>LinkedIn Orgânico (3 posts)</span><span style="color:var(--k-jade);font-weight:600">85%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:85%;background:var(--k-jade)"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label-row"><span>LinkedIn Paid EU/NA</span><span style="color:var(--k-sunset);font-weight:600">20%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:20%;background:var(--k-sunset)"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label-row"><span>Health Edge Newsletter</span><span style="color:var(--k-sunrise);font-weight:600">30%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:30%;background:var(--k-sunrise)"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 6 — CHECKLIST
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-checklist">
+      <div class="sec-header">
+        <h2>Checklist de Execução — <strong>Giovana</strong></h2>
+        <p>Execute na ordem indicada. Clique nos itens para marcar como concluídos. Não execute nenhum asset sem antes validar o Customer Journey com o Digital Lead.</p>
+      </div>
+
+      <div id="cl">
+        <div class="cl-group">
+          <div class="cl-group-title">⚠️ Pré-requisito — Fazer ANTES de qualquer execução</div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Validar Customer Journey com Digital Lead antes de executar qualquer asset</div><div class="cl-meta">Wk 13 abr · OBRIGATÓRIO — sem esta etapa não avançar</div></div>
+          </div>
+        </div>
+
+        <div class="cl-group">
+          <div class="cl-group-title">Landing Page Marketo — publicação: 20/abr</div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Copiar campos do copy deck para o Workfront: Eyebrow, Hero Title, Intro, Bullets, Form Title, CTA</div><div class="cl-meta">Deadline: Abr 15 · ✅ Copy aprovado por Mollie</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Preencher Storytelling Card body com versão APROVADA pela Mollie — não usar sugestão TGT diretamente sem aprovação</div><div class="cl-meta">Deadline: Abr 15 · 🟡 Aguardar aprovação da Mollie</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Nomear e anexar imagens: hero_sensoril.jpg e storytelling_sensoril.jpg</div><div class="cl-meta">Deadline: Abr 15</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Receber UTM final do Digital Lead e inserir nos campos correspondentes da landing page</div><div class="cl-meta">Deadline: Abr 17 · Digital Lead → Giovana</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Validar go-live da landing page em 20/abr</div><div class="cl-meta">Deadline: Abr 20</div></div>
+          </div>
+        </div>
+
+        <div class="cl-group">
+          <div class="cl-group-title">LinkedIn Orgânico — 3 posts · a partir de 15/abr</div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Aguardar UTM final da Mollie (previsto 17/abr) antes de publicar posts com links</div><div class="cl-meta">Aguardando Mollie · não publicar links sem UTM confirmado</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Inserir UTM nos 3 posts e agendar publicação nos perfis Kerry, Kerry Health Solutions e Kerry Pharma</div><div class="cl-meta">Após Abr 17 · ✅ Copy aprovado</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Confirmar hashtags — Posts 1+2: #WomensHealth #Menopause #ProActiveHealth #Sensoril #Ashwagandha / Post 3: + #BoneHealth</div><div class="cl-meta">Antes de publicar</div></div>
+          </div>
+        </div>
+
+        <div class="cl-group">
+          <div class="cl-group-title">Email Marketo Global — publicação: 5/mai</div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Subject line OBRIGATÓRIO: "Clinically backed support for menopause" — NÃO usar "SCIENCE THAT SUPPORTS HER" (esse é o banner/hero, não o subject)</div><div class="cl-meta">⚠️ Crítico — erro comum, verificar antes do disparo</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Configurar preheader: "Explore new clinical findings showing meaningful menopause support at 250 mg/day."</div><div class="cl-meta">Antes do disparo</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Inserir eyebrow "Evidence for real-world impact" e hero banner "SCIENCE THAT SUPPORTS HER"</div><div class="cl-meta">Antes do disparo · ✅ Copy aprovado</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Inserir body copy completo com personalização %FIRSTNAME%</div><div class="cl-meta">Antes do disparo · ✅ Copy aprovado</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Inserir UTM do CTA (nome de campanha: 26gl-ph-sensoril-womens-health)</div><div class="cl-meta">Antes do disparo</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Definir lista de disparo com Thaís/Digital Lead</div><div class="cl-meta">Deadline: Mai 01</div></div>
+          </div>
+          <div class="cl-item" onclick="toggleCL(this)">
+            <div class="cl-check"></div>
+            <div><div class="cl-text">Confirmar: sem resend, sem regionalização, disparo único global em 5/mai</div><div class="cl-meta">Deadline: Mai 05</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 7 — COPY DESK
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-copy">
+      <div class="sec-header">
+        <h2>Copy Desk — <strong>Referência por Canal</strong></h2>
+        <p>Todo copy marcado ✅ foi validado por Mollie no Copy Review (março 2026) e pode ser usado diretamente. Copy marcado 🟡 requer aprovação antes de publicar.</p>
+      </div>
+
+      <div class="warn-box red">
+        <strong>⚠️ Atenção — Subject Line Email Marketo</strong>
+        O Copy Review usa "SCIENCE THAT SUPPORTS HER" como subject — isso está INCORRETO para o campo subject line (muito longo). O subject correto e obrigatório é: <strong>"Clinically backed support for menopause"</strong>. "SCIENCE THAT SUPPORTS HER" é o hero banner/título do email, não o subject.
+      </div>
+
+      <div class="subsec"><h3>Email Marketo Global</h3></div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Subject Line</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">Clinically backed support for menopause</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Preheader</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">Explore new clinical findings showing meaningful menopause support at 250 mg/day.</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Eyebrow</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">Evidence for real-world impact</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Hero Banner / Título Principal</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">SCIENCE THAT SUPPORTS HER</div>
+      </div>
+
+      <div class="subsec"><h3>Landing Page Marketo</h3></div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Eyebrow</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">Evidence for real-world impact</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Hero Title</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">SCIENCE THAT SUPPORTS HER</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Intro / Body (Hero)</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-body ok">Menopause affects women differently, but the need for science-backed solutions is universal. With 80% of women experiencing some of the 40+ menopause related symptoms and spending up to 40% of their lifetime in their post-menopausal years, the time for innovation to meet these growing consumer needs, is now.<br><br>Sensoril® is the premium root and leaf, clinically backed ashwagandha on the market, with specific results on menopause relief. Clinical research highlights Sensoril's unique ability to support symptom management and quality of life in women, post menopause at as low as 250mg/day.</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Bulleted List — Key Study Insights</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-body ok">
+          • Sensoril improves menopause specific quality of life, measured through changes in vasomotor, psychosocial, physical and sexual domains.<br>
+          • Sensoril® supports bone health in menopausal women.<br>
+          • New research indicates that these results are clinically relevant.
+        </div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Form Title (máx. 50 chars)</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">Download New Menopause Insights</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">CTA Button</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">Access Now</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Storytelling Card — Title (máx. 60 chars)</span><span class="badge b-ok">✅ Aprovado</span></div>
+        <div class="copy-mono">How Sensoril® can support women through menopause</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Storytelling Card — Body</span><span class="badge b-val">🟡 Sugestão TGT — Validar com Mollie antes de usar</span></div>
+        <div class="copy-body val">Sensoril® is the only root-and-leaf ashwagandha extract with clinical evidence specific to menopause. A recent study published in the Journal of Menopausal Medicine demonstrated that Sensoril improved menopause-related quality of life (MenQol), including vasomotor, psychosocial, physical and sexual domains.<br><br>New analysis confirms that these results are clinically meaningful — not just statistically significant. Additionally, Sensoril was shown to support a healthy bone turnover balance, with significant decreases in bone resorption markers and increases in bone formation markers, at doses as low as 250 mg/day.<br><br>For formulators and brands targeting women's health, Sensoril provides a differentiated, science-backed solution backed by two complementary publications.</div>
+      </div>
+
+      <div class="subsec"><h3>Health Edge Newsletter</h3></div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Headline sugerida</span><span class="badge b-val">🟡 Sugestão — Validar com Andrea</span></div>
+        <div class="copy-mono val">Beyond Symptom Relief: New Data on Sensoril® Ashwagandha and Menopause Bone Health</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-head"><span class="copy-head-title">Corpo do artigo</span><span class="badge b-val">🟡 Sugestão — Validar com Andrea</span></div>
+        <div class="copy-body val">The conversation around menopause has evolved significantly — and so has the science.<br><br>When Sensoril® ashwagandha was first studied in the context of menopause, the focus was on quality of life: vasomotor symptoms, mood, physical wellbeing. The 2025 publication in the Journal of Menopausal Medicine established a strong foundation.<br><br>Now, new analysis expands that picture. Published in Gynecological and Reproductive Endocrinology and Metabolism, the latest findings confirm that Sensoril's improvements in menopause-related quality of life are not just statistically meaningful — they are clinically relevant. Crucially, the data also reveals a significant positive effect on bone turnover biomarkers: decreased resorption markers and increased formation markers, indicative of a healthier bone metabolism balance.<br><br>This matters because up to 20% of bone loss can occur during the menopausal transition, contributing to a long-term risk of osteoporosis — a condition that affects 1 in 10 women over 60 worldwide.<br><br>For health and nutrition professionals, this dual-action profile — menopause symptom support and bone health — positions Sensoril® as a uniquely relevant ingredient for the fast-growing women's health supplement category.<br><br>With 47 million women entering menopause each year by 2030, and 80% experiencing related symptoms, the market opportunity is clear. The science now provides the differentiation.<br><br>Sensoril® is available at doses as low as 250 mg/day.<br><br>[CTA: Access the full research in the Kerry Women's Health Library →]</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SEÇÃO 8 — BRAND GUIDE
+    ═══════════════════════════════════════ -->
+    <div class="section" id="s-brand">
+      <div class="sec-header">
+        <h2>Kerry <strong>Brand Guidelines</strong> — Referência Visual</h2>
+        <p>Padrão visual para produção de peças Sensoril®. Fonte: Kerry Brand in Your Hand (Dez 2025) + Kerry ProActive Health Brand Guidance (Out 2024).</p>
+      </div>
+
+      <div class="subsec"><h3>Paleta de Cores Primária</h3></div>
+      <div class="palette-row">
+        <div class="swatch" style="background:#005776;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">Valentia Slate</span><span class="swatch-hex">#005776</span></div>
+        <div class="swatch" style="background:#289ba2;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">Sage</span><span class="swatch-hex">#289ba2</span></div>
+        <div class="swatch" style="background:#44cf93;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">Jade</span><span class="swatch-hex">#44cf93</span></div>
+        <div class="swatch" style="background:#fff;border:0.5px solid #ccc;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label" style="background:rgba(0,0,0,.4)">White</span><span class="swatch-hex" style="color:#999">#FFFFFF</span></div>
+      </div>
+
+      <div class="subsec"><h3>Paleta Secundária</h3></div>
+      <div class="palette-row">
+        <div class="swatch" style="background:#f9c20a;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label" style="background:rgba(0,0,0,.4)">Sunrise</span><span class="swatch-hex" style="color:rgba(0,0,0,.6)">#F9C20A</span></div>
+        <div class="swatch" style="background:#f24a00;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">Sunset</span><span class="swatch-hex">#F24A00</span></div>
+        <div class="swatch" style="background:#ffc2b3;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label" style="background:rgba(0,0,0,.35)">Amaranth</span><span class="swatch-hex" style="color:rgba(0,0,0,.5)">#FFC2B3</span></div>
+        <div class="swatch" style="background:#143700;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">Forest</span><span class="swatch-hex">#143700</span></div>
+      </div>
+      <div class="palette-row">
+        <div class="swatch" style="background:#f1f1e5;border:0.5px solid #ccc;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label" style="background:rgba(0,0,0,.3)">Stone</span><span class="swatch-hex" style="color:#888">#F1F1E5</span></div>
+        <div class="swatch" style="background:#dfff11;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label" style="background:rgba(0,0,0,.45)">Innovation</span><span class="swatch-hex" style="color:rgba(0,0,0,.5)">#DFFF11</span></div>
+        <div class="swatch" style="background:#289ba2;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">PAH Primary</span><span class="swatch-hex">#289BA2</span></div>
+        <div class="swatch" style="background:#143700;flex-direction:column;justify-content:flex-end;gap:2px"><span class="swatch-label">PAH Forest</span><span class="swatch-hex">#143700</span></div>
+      </div>
+
+      <div class="subsec"><h3>Tipografia Kerry</h3></div>
+      <div class="grid g3">
+        <div class="type-demo">
+          <div class="type-demo-label">① Principal — Headlines &amp; Body</div>
+          <div style="font-family:'Noto Sans',sans-serif;font-size:20px;font-weight:300;color:var(--k-slate);margin-bottom:4px">Noto Sans</div>
+          <div style="font-size:11px;color:#666;line-height:1.6">Light → Headlines<br>Bold → Sub-headlines<br>Regular → Body copy</div>
+        </div>
+        <div class="type-demo">
+          <div class="type-demo-label">② Impact Statements</div>
+          <div style="font-family:'Noto Sans',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;color:var(--k-slate);letter-spacing:.5px;margin-bottom:4px">NOTO SANS<br>CONDENSED BOLD</div>
+          <div style="font-size:11px;color:#666;line-height:1.6">Somente em início/fim de statements. Nunca em parágrafos.</div>
+        </div>
+        <div class="type-demo">
+          <div class="type-demo-label">③ Dados Científicos</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--k-sage);margin-bottom:4px">IBM Plex Mono</div>
+          <div style="font-size:11px;color:#666;line-height:1.6">Exclusivo para dados científicos e valores técnicos. Nunca em copy geral.</div>
+        </div>
+      </div>
+
+      <div class="subsec"><h3>Regras de Aplicação de Marca</h3></div>
+      <div class="brand-rules">
+        <div class="rule-card rule-ok">
+          <h4 style="color:#0a6e3f">✅ Uso correto</h4>
+          <ul class="rule-list" style="padding-left:14px">
+            <li>Valentia Slate (#005776) sempre presente na peça</li>
+            <li>Logo Kerry positivo em fundo claro; reversed (branco) em fundo escuro ou imagem</li>
+            <li>Headlines em Title Case; body copy em Sentence case</li>
+            <li>Impact statements em ALL CAPS somente com Noto Sans Condensed</li>
+            <li>Noto Serif apenas em aspas e citações diretas</li>
+            <li>IBM Plex Mono apenas para dados científicos e valores técnicos</li>
+          </ul>
+        </div>
+        <div class="rule-card rule-no">
+          <h4 style="color:#c0392b">❌ Proibido</h4>
+          <ul class="rule-list" style="padding-left:14px">
+            <li>Distorcer, rotacionar ou recolorir o logo Kerry</li>
+            <li>Logo em fundo de baixo contraste ou imagem busy</li>
+            <li>IBM Plex Mono em headlines, subheadings ou copy geral</li>
+            <li>Noto Sans Condensed em parágrafos corridos ou body copy</li>
+            <li>Impact statements no meio de uma frase — somente início/fim</li>
+            <li>Alterar cores fora da paleta oficial sem aprovação</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsec"><h3>Contatos-Chave da Campanha</h3></div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-name">Mollie Mulligan</div>
+          <div class="contact-role">Global Campaign Lead</div>
+          <div class="contact-scope">Validação de copy e assets globais. UTM links (previstos 17/abr). Storytelling Card body. Kerry Digest. Press Release via CA.</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-name">Digital Lead (Kerry)</div>
+          <div class="contact-role">Digital / Plataformas</div>
+          <div class="contact-scope">⚠️ Validar Customer Journey OBRIGATORIAMENTE antes de qualquer execução. Fornece UTMs finais.</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-name">Andrea</div>
+          <div class="contact-role">Lead EU / GL</div>
+          <div class="contact-scope">NutraIngredients EU. LinkedIn Paid EU. Health Edge Newsletter — revisar antes de publicar.</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-name">Mindy</div>
+          <div class="contact-role">Lead NA</div>
+          <div class="contact-scope">NutraIngredients NA. LinkedIn Paid NA. Kerry Now LP.</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-name">Sonia</div>
+          <div class="contact-role">Lead APMEA</div>
+          <div class="contact-scope">Responsável pelos itens [APMEA] de junho. NutraIngredients APAC. LinkedIn APMEA. Material due: 22/jun.</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-name">Loretta Kelly</div>
+          <div class="contact-role">Executive Sponsor</div>
+          <div class="contact-scope">Sponsor executivo da campanha global Sensoril®.</div>
+        </div>
+      </div>
+
+      <div class="sp"></div>
+      <div style="background:var(--k-slate);border-radius:10px;padding:16px 20px;color:rgba(255,255,255,.6);font-size:11px;line-height:1.7">
+        <strong style="color:#fff;display:block;margin-bottom:4px">Documentos de Referência</strong>
+        Kerry Brand in Your Hand — December 2025 · Kerry ProActive Health Brand Guidance — October 2024 · Sensoril® Menopause PT2 Campaign Brief · Marketo Landing Page Brief · Copy Review March 2026
+      </div>
+      <div class="sp"></div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+const titles = {
+  overview: 'Visão Geral Estratégica',
+  roles: 'Papéis TGT Studio ↔ Kerry',
+  flow: 'Fluxo da Campanha',
+  timeline: 'Timeline Abr–Jun 2026',
+  assets: 'Assets & Status',
+  checklist: 'Checklist de Execução',
+  copy: 'Copy Desk',
+  brand: 'Brand Guidelines'
+};
+
+function show(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('s-' + id).classList.add('active');
+  btn.classList.add('active');
+  document.getElementById('topbar-title').textContent = titles[id] || id;
+  window.scrollTo(0, 0);
+}
+
+function toggleCL(item) {
+  const ch = item.querySelector('.cl-check');
+  const done = ch.classList.toggle('done');
+  item.classList.toggle('is-done', done);
+  ch.textContent = done ? '✓' : '';
+}
+</script>
+</body>
+</html>
