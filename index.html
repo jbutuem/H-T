@@ -237,25 +237,51 @@ body{font-family:'Noto Sans',sans-serif;background:#f4f4ee;color:var(--k-text);m
 .sp-sm{height:10px}
 
 /* ── RESPONSIVE ── */
+/* ── HAMBURGER BUTTON ── */
+.mob-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;color:#fff;line-height:1}
+.mob-menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:4px 0;border-radius:1px;transition:all .2s}
+
+/* ── SIDEBAR OVERLAY ── */
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:99}
+.sidebar-overlay.open{display:block}
+
 @media(max-width:860px){
-  .sidebar{width:180px}
-  .main{margin-left:180px}
-  .g4,.g3,.g2{grid-template-columns:1fr 1fr}
+  .sidebar{width:200px}
+  .main{margin-left:200px}
+  .g4,.g3{grid-template-columns:1fr 1fr}
   .data-row{grid-template-columns:repeat(3,1fr)}
   .process4{grid-template-columns:1fr 1fr}
   .p4-step:nth-child(2){border-right:none}
   .p4-step:nth-child(3){border-top:1px solid var(--k-slate-20)}
-  .flow-strip{grid-template-columns:1fr 1fr 1fr}
+  .flow-strip{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:640px){
-  .sidebar{display:none}
+@media(max-width:680px){
+  /* Sidebar becomes a slide-in drawer */
+  .sidebar{
+    transform:translateX(-100%);
+    transition:transform .25s ease;
+    z-index:200;
+    width:260px;
+  }
+  .sidebar.open{transform:translateX(0)}
+  .mob-menu-btn{display:block}
   .main{margin-left:0}
-  .section{padding:16px}
+  .section{padding:14px}
   .g2,.g3,.g4,.data-row,.process4,.palette-row,.brand-rules,.contact-grid{grid-template-columns:1fr}
   .flow-strip{grid-template-columns:1fr}
-  .topbar{flex-direction:column;align-items:flex-start;gap:6px}
+  .topbar{padding:10px 14px;flex-wrap:wrap;gap:6px}
   .topbar-pills{display:none}
+  .topbar-title{font-size:12px}
+  .topbar-meta{font-size:9px}
+  .table-wrap{font-size:10px}
+  .asset-table th,.asset-table td{padding:7px 8px}
+  .data-num{font-size:20px}
+  .funnel-stage{padding:12px 14px}
+  .tl-list{padding-left:34px}
+  .tl-dot{left:-34px;width:24px;height:24px;font-size:7px}
+  .process4{grid-template-columns:1fr 1fr}
+  .gate-box{padding:28px 22px;margin:16px}
 }
 </style>
 </head>
@@ -330,11 +356,19 @@ body{font-family:'Noto Sans',sans-serif;background:#f4f4ee;color:var(--k-text);m
   <!-- ═══ MAIN ═══ -->
   <main class="main">
 
+    <!-- SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
     <!-- TOP BAR -->
     <div class="topbar">
-      <div>
-        <div class="topbar-title" id="topbar-title">Visão Geral Estratégica</div>
-        <div class="topbar-meta">Sensoril® Ashwagandha · Menopause Global Push PT2</div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="mob-menu-btn" id="mob-btn" onclick="toggleSidebar()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div>
+          <div class="topbar-title" id="topbar-title">Visão Geral Estratégica</div>
+          <div class="topbar-meta">Sensoril® Ashwagandha · Menopause Global Push PT2</div>
+        </div>
       </div>
       <div class="topbar-pills">
         <span class="topbar-pill jade">✓ Copy aprovado por Mollie</span>
@@ -1108,6 +1142,19 @@ function show(id, btn) {
   btn.classList.add('active');
   document.getElementById('topbar-title').textContent = titles[id] || id;
   window.scrollTo(0, 0);
+  closeSidebar();
+}
+
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  const isOpen = sidebar.classList.toggle('open');
+  overlay.classList.toggle('open', isOpen);
+}
+
+function closeSidebar() {
+  document.querySelector('.sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('open');
 }
 
 function checkPW() {
