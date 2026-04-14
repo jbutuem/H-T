@@ -9,6 +9,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
+/* ── PASSWORD GATE ── */
+#gate{position:fixed;inset:0;background:var(--k-slate);z-index:9999;display:flex;align-items:center;justify-content:center}
+#gate.hidden{display:none}
+.gate-box{background:#fff;border-radius:16px;padding:40px 36px;width:100%;max-width:360px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.gate-logo{display:flex;align-items:flex-end;justify-content:center;gap:0;margin-bottom:6px}
+.gate-logo span{font-size:22px;font-weight:700;color:var(--k-slate);letter-spacing:2.5px}
+.gate-logo div{width:42px;height:2px;background:var(--k-jade);margin-bottom:5px;margin-left:2px}
+.gate-subtitle{font-size:11px;color:#999;letter-spacing:.8px;text-transform:uppercase;margin-bottom:28px}
+.gate-label{font-size:12px;color:#666;margin-bottom:10px;text-align:left}
+.gate-input{width:100%;border:1.5px solid #d4d2c8;border-radius:8px;padding:11px 14px;font-family:'Noto Sans',sans-serif;font-size:14px;letter-spacing:2px;outline:none;transition:border .15s;text-align:center}
+.gate-input:focus{border-color:var(--k-slate)}
+.gate-input.error{border-color:#f24a00;animation:shake .3s}
+.gate-btn{width:100%;margin-top:14px;background:var(--k-slate);color:#fff;border:none;border-radius:8px;padding:12px;font-family:'Noto Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:background .15s;letter-spacing:.3px}
+.gate-btn:hover{background:var(--k-slate-80)}
+.gate-error{font-size:11px;color:#f24a00;margin-top:10px;min-height:16px}
+.gate-hint{font-size:10px;color:#bbb;margin-top:20px;line-height:1.5}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
 :root{
   --k-slate:#005776;--k-slate-80:#337d95;--k-slate-60:#66a3b3;--k-slate-40:#99c9d1;--k-slate-20:#cce4e8;
   --k-sage:#289ba2;--k-jade:#44cf93;--k-forest:#143700;--k-stone:#f1f1e5;
@@ -241,6 +260,20 @@ body{font-family:'Noto Sans',sans-serif;background:#f4f4ee;color:var(--k-text);m
 </style>
 </head>
 <body>
+
+<!-- PASSWORD GATE -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-logo"><span>KERRY</span><div></div></div>
+    <div class="gate-subtitle">H&amp;T Marketing · TGT Studio</div>
+    <div class="gate-label">Senha de acesso</div>
+    <input class="gate-input" id="gate-pw" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" maxlength="20" onkeydown="if(event.key==='Enter')checkPW()">
+    <button class="gate-btn" onclick="checkPW()">Acessar &rarr;</button>
+    <div class="gate-error" id="gate-err"></div>
+    <div class="gate-hint">Documento confidencial · Kerry × TGT Studio<br>Campanha Sensoril® Menopause PT2 · 2026</div>
+  </div>
+</div>
+
 
 <div class="layout">
 
@@ -1075,6 +1108,28 @@ function show(id, btn) {
   btn.classList.add('active');
   document.getElementById('topbar-title').textContent = titles[id] || id;
   window.scrollTo(0, 0);
+}
+
+function checkPW() {
+  const pw = document.getElementById("gate-pw").value;
+  const err = document.getElementById("gate-err");
+  if (pw === "HT20206") {
+    document.getElementById("gate").classList.add("hidden");
+    sessionStorage.setItem("kerry_auth","1");
+  } else {
+    err.textContent = "Senha incorreta. Tente novamente.";
+    const input = document.getElementById("gate-pw");
+    input.classList.add("error");
+    setTimeout(() => { input.classList.remove("error"); err.textContent = ""; }, 1500);
+    input.value = "";
+    input.focus();
+  }
+}
+
+if (sessionStorage.getItem("kerry_auth") === "1") {
+  document.getElementById("gate").classList.add("hidden");
+} else {
+  setTimeout(() => document.getElementById("gate-pw").focus(), 100);
 }
 
 function toggleCL(item) {
