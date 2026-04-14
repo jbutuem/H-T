@@ -819,8 +819,6 @@ html,body{font-family:'Noto Sans',sans-serif;background:var(--bg);color:var(--te
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-
 // ── AUTH ──
 function auth() {
   if (document.getElementById('gpw').value === 'HT20206') {
@@ -835,8 +833,15 @@ function auth() {
     i.value=''; i.focus();
   }
 }
-if (sessionStorage.getItem('k_auth')==='1') document.getElementById('gate').classList.add('off');
-else setTimeout(()=>document.getElementById('gpw').focus(), 200);
+// auto-unlock if already authenticated
+(function(){
+  if (sessionStorage.getItem('k_auth')==='1') {
+    var g = document.getElementById('gate');
+    if (g) g.classList.add('off');
+  } else {
+    setTimeout(function(){ var el=document.getElementById('gpw'); if(el) el.focus(); }, 200);
+  }
+})();
 
 // ── PHASE ──
 let currentPhase = parseInt(localStorage.getItem('k_phase')||'0');
